@@ -10,8 +10,4 @@
       <ProjectReference Include="..\Bibliocine.Core\Bibliocine.Core.csproj" />
     </ItemGroup>
 
-    <ItemGroup>
-      <Folder Include="Enum\" />
-    </ItemGroup>
-
 </Project>
