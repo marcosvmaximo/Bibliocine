@@ -24,5 +24,5 @@ public abstract class Obra : Entity, IAggregateRoot
     public ENota Avaliacao { get; private set; }
     public DateTime AnoLancamento { get; private set; }
     
-    public Cliente Cliente { get; private set; }
+    public Usuario Usuario { get; private set; }
 }

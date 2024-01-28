@@ -2,11 +2,11 @@ using Bibliocine.Core;
 
 namespace Bibliocine.Domain.Entities;
 
-public class Cliente : Entity
+public class Usuario : Entity
 {
     private List<Obra> _favoritos;
     
-    public Cliente(string nome, DateTime dataNascimento, string email)
+    public Usuario(string nome, DateTime dataNascimento, string email)
     {
         Nome = nome;
         DataNascimento = dataNascimento;

@@ -1,6 +1,9 @@
+using Bibliocine.Core.Data;
+using Bibliocine.Domain.Entities;
+
 namespace Bibliocine.Domain.Interfaces;
 
-public interface IObraRepository
+public interface IObraRepository : IRepository<Filme>
 {
     
 }

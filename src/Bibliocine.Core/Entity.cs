@@ -1,3 +1,5 @@
+using Bibliocine.Core.Messages.Common;
+
 namespace Bibliocine.Core;
 public abstract class Entity
 {

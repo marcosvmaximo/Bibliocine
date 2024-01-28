@@ -10,4 +10,8 @@
       <Folder Include="Configurations\" />
     </ItemGroup>
 
+    <ItemGroup>
+      <ProjectReference Include="..\Bibliocine.Domain\Bibliocine.Domain.csproj" />
+    </ItemGroup>
+
 </Project>
