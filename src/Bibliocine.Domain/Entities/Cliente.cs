@@ -1,6 +1,8 @@
+using Bibliocine.Core;
+
 namespace Bibliocine.Domain.Entities;
 
-public class Cliente
+public class Cliente : Entity
 {
     private List<Obra> _favoritos;
     
@@ -24,5 +26,10 @@ public class Cliente
             throw new ArgumentNullException("Obra informada não é válida.");
         
         _favoritos.Add(obra);
+    }
+
+    public override void Validar()
+    {
+        throw new NotImplementedException();
     }
 }

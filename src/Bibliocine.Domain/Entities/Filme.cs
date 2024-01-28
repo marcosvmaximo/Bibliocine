@@ -33,4 +33,9 @@ public class Filme : Obra
     public EFormatoFilme Formato { get; private set; }
     public float Duracao { get; private set; }
     public string Sinopse { get; private set; }
+    
+    public override void Validar()
+    {
+        throw new NotImplementedException();
+    }
 }

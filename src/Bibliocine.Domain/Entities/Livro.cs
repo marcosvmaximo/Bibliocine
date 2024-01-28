@@ -33,4 +33,9 @@ public class Livro : Obra
     public EFormatoLivro Formato { get; private set; }
     public int NumeroPaginas { get; private set; }
     public string Descricao { get; private set; }
+    
+    public override void Validar()
+    {
+        throw new NotImplementedException();
+    }
 }
