@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Bibliocine.Infra")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+beebc2ef29da90c5008678e012ee223e01822152")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e964dafae293e4cac4849b8243236abe36a9ee62")]
 [assembly: System.Reflection.AssemblyProductAttribute("Bibliocine.Infra")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Bibliocine.Infra")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

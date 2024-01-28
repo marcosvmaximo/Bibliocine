@@ -19,7 +19,15 @@ public class CatalogoController : CommonController
     // Necessita estar autenticado, e que envie o usuario em questão
         // Como chamar o modulo
         // Preciso enviar o usuario logado?
-    [HttpGet("favoritos")] 
+        
+        
+        
+    // 1. Criar autenticacao e autorizacao
+    // 2. Integrar a API de terceiros
+    // 3. Realizar o filtro e buscar na APi de terceiro
+    // 4. Exibir
+    // 5. Tratar os favoritos
+    [HttpGet("favoritos")]
     public async Task<ActionResult<IEnumerable<Obra>>> ObterFavoritos()
     {
         
