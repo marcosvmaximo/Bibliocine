@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "LkVniCtyXjv3+VYaHvPuPdRh85KpQwWHYDMrVu6PvhhPzLFukEkXoEaqvWMJNJcWvOrnNwckOGT6V3Y+ayyZnw==",
+  "success": true,
+  "projectFilePath": "/Users/marcosmaximo/RiderProjects/Bibliocine/src/Bibliocine.Infra/Bibliocine.Infra.csproj",
+  "expectedPackageFiles": [
+    "/Users/marcosmaximo/.nuget/packages/microsoft.netcore.app.ref/7.0.15/microsoft.netcore.app.ref.7.0.15.nupkg.sha512",
+    "/Users/marcosmaximo/.nuget/packages/microsoft.aspnetcore.app.ref/7.0.15/microsoft.aspnetcore.app.ref.7.0.15.nupkg.sha512"
+  ],
+  "logs": []
+}
