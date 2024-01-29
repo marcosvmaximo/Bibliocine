@@ -18,20 +18,19 @@ public class ObraRepository : IObraRepository
     
     public async Task<IEnumerable<Obra>> PesquisarObras(string? filtro)
     {
-        List<Obra> result = new();
+        List<Obra> obras = new();
         
         var filmes = await _filmeService.Pesquisar(filtro);
         var livros = await _livroService.Pesquisar(filtro);
         
-        result.AddRange(filmes);
-        result.AddRange(livros);
+        obras.AddRange(filmes);
+        obras.AddRange(livros);
 
-        return result;
+        return obras;
     }
     
     public void Dispose()
     {
-        // TODO release managed resources here
     }
 
 }

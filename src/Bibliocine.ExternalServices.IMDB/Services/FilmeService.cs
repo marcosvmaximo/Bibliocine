@@ -7,27 +7,35 @@ namespace Bibliocine.ExternalServices.IMDB.Services;
 
 public class FilmeService : IObraService<Filme>
 {
-    private readonly IIMDBFilmeExternalService _service;
+    private readonly ITMDBFilmeExternalService _service;
 
-    public FilmeService(IIMDBFilmeExternalService service)
+    public FilmeService(ITMDBFilmeExternalService service)
     {
         _service = service;
     }
     
     public async Task<IEnumerable<Filme>> Pesquisar(string filtro)
     {
-        var respose = await _service.Find(filtro);
-
-        List<Filme> filmes = new();
+        var filmesResult = await _service.FindMovies(filtro);
+        var generosResult = await _service.FindGenres();
         
-        foreach (var result in respose.Data.TitleResponse.Results)
+        List<Filme> result = new();
+        
+        foreach (var filme in filmesResult.Data.Results)
         {
-            // Deixar os objetos pertinentes às informações retornadas
-            // Pdronizar retorno
-            var filme = new Filme(result.TitleNameText, null, 12, EGenero.Animacao, ENota.BOM, DateTime.Now, null, EFormatoFilme.Digital, 10, "");
-            filmes.Add(filme);
         }
 
-        return filmes;
+        return result;
     }
+}
+
+public class ObraComum
+{
+    public string Title { get; set; }
+    public List<string> AuthorsOrDirectors { get; set; }
+    public string PublishedDateOrTitleReleaseText { get; set; }
+    public string Description { get; set; }
+    public List<string> Categories { get; set; }
+    public string Language { get; set; }
+    public string ImageUrl { get; set; }
 }

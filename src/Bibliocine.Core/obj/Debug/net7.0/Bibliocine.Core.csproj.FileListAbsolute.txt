@@ -1,0 +1,13 @@
+/Users/marcosmaximo/RiderProjects/Bibliocine/src/Bibliocine.Core/bin/Debug/net7.0/Bibliocine.Core.deps.json
+/Users/marcosmaximo/RiderProjects/Bibliocine/src/Bibliocine.Core/bin/Debug/net7.0/Bibliocine.Core.dll
+/Users/marcosmaximo/RiderProjects/Bibliocine/src/Bibliocine.Core/bin/Debug/net7.0/Bibliocine.Core.pdb
+/Users/marcosmaximo/RiderProjects/Bibliocine/src/Bibliocine.Core/obj/Debug/net7.0/Bibliocine.Core.csproj.AssemblyReference.cache
+/Users/marcosmaximo/RiderProjects/Bibliocine/src/Bibliocine.Core/obj/Debug/net7.0/Bibliocine.Core.GeneratedMSBuildEditorConfig.editorconfig
+/Users/marcosmaximo/RiderProjects/Bibliocine/src/Bibliocine.Core/obj/Debug/net7.0/Bibliocine.Core.AssemblyInfoInputs.cache
+/Users/marcosmaximo/RiderProjects/Bibliocine/src/Bibliocine.Core/obj/Debug/net7.0/Bibliocine.Core.AssemblyInfo.cs
+/Users/marcosmaximo/RiderProjects/Bibliocine/src/Bibliocine.Core/obj/Debug/net7.0/Bibliocine.Core.csproj.CoreCompileInputs.cache
+/Users/marcosmaximo/RiderProjects/Bibliocine/src/Bibliocine.Core/obj/Debug/net7.0/Bibliocine.Core.sourcelink.json
+/Users/marcosmaximo/RiderProjects/Bibliocine/src/Bibliocine.Core/obj/Debug/net7.0/Bibliocine.Core.dll
+/Users/marcosmaximo/RiderProjects/Bibliocine/src/Bibliocine.Core/obj/Debug/net7.0/refint/Bibliocine.Core.dll
+/Users/marcosmaximo/RiderProjects/Bibliocine/src/Bibliocine.Core/obj/Debug/net7.0/Bibliocine.Core.pdb
+/Users/marcosmaximo/RiderProjects/Bibliocine/src/Bibliocine.Core/obj/Debug/net7.0/ref/Bibliocine.Core.dll

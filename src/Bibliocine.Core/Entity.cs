@@ -4,6 +4,7 @@ namespace Bibliocine.Core;
 public abstract class Entity
 {
     private List<Event> _events;
+    
     public Entity()
     {
         Id = Guid.NewGuid();

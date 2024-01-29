@@ -3,6 +3,10 @@ using System.Net;
 
 namespace Bibliocine.Core.DTO;
 
+/// <summary>
+/// Resposta padrão para chamadas Externas
+/// </summary>
+/// <typeparam name="T">Response body</typeparam>
 public class ResponseGeneric<T> where T : class
 {
     public HttpStatusCode HttpCode { get; set; }
