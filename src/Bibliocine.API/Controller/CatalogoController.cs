@@ -23,12 +23,10 @@ public class CatalogoController : CommonController
     {
         var obras = await _repository.PesquisarObras(filtro);
 
-        // Criar os objetos corretamente
-        
         // Mapeamento para view model
         if (obras == null)
         {
-            return BadRequest();
+            return NotFound();
         }
         
         return Ok(obras);

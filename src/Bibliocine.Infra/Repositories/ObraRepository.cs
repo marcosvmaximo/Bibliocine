@@ -25,12 +25,7 @@ public class ObraRepository : IObraRepository
         
         obras.AddRange(filmes);
         obras.AddRange(livros);
-
+        
         return obras;
     }
-    
-    public void Dispose()
-    {
-    }
-
 }

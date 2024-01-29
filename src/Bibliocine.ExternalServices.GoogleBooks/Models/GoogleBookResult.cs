@@ -9,5 +9,5 @@ public class GoogleBookResult
     public int TotalItems { get; set; }
     
     [JsonPropertyName("items")]
-    public List<Item> Items { get; set; }
+    public List<BookResult> Books { get; set; }
 }

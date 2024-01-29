@@ -1,28 +1,20 @@
 using Bibliocine.Core;
-using Bibliocine.Domain.Entities;
 using Bibliocine.Domain.Enum;
-using Bibliocine.Domain.ValueObjects;
 
 namespace Bibliocine.Domain;
 
-public abstract class Obra : Entity, IAggregateRoot
+public abstract class Obra : IAggregateRoot
 {
-    protected Obra(string titulo, Capa capa, int classicacaoEtaria, EGenero genero, ENota avaliacao, DateTime anoLancamento)
+    protected Obra()
     {
-        Titulo = titulo;
-        Capa = capa;
-        ClassicacaoEtaria = classicacaoEtaria;
-        Genero = genero;
-        Avaliacao = avaliacao;
-        AnoLancamento = anoLancamento;
+        
     }
 
-    public string Titulo { get; private set; }
-    public Capa Capa { get; private set; }
-    public int ClassicacaoEtaria { get; private set; }
-    public EGenero Genero { get; private set; }
-    public ENota Avaliacao { get; private set; }
-    public DateTime AnoLancamento { get; private set; }
-    
-    public Usuario Usuario { get; private set; }
+    public string? Id { get; set; }
+    public ETipoObra TipoObra { get; set; }
+    public string? Titulo { get; set; }
+    public string? ImagemUrl { get; set; }
+    public string? Descricao { get; set; }
+    public List<string?> Generos { get; set; }
+    public string? DataLancamento { get; set; }
 }

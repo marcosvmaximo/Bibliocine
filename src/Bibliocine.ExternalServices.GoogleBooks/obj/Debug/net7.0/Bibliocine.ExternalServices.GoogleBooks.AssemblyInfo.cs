@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Bibliocine.ExternalServices.GoogleBooks")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+841ad556de358840d8a32a949b5a2c4286181dd3")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8fe42c63de19fb4c69cb014a713579c1d5c55946")]
 [assembly: System.Reflection.AssemblyProductAttribute("Bibliocine.ExternalServices.GoogleBooks")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Bibliocine.ExternalServices.GoogleBooks")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

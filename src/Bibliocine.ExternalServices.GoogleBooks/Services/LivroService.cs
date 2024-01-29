@@ -1,8 +1,9 @@
+using System.Net;
 using Bibliocine.Domain.Entities;
 using Bibliocine.Domain.Enum;
 using Bibliocine.Domain.Interfaces;
-using Bibliocine.Domain.ValueObjects;
 using Bibliocine.ExternalServices.GoogleBooks.Interfaces;
+using Bibliocine.ExternalServices.GoogleBooks.Models;
 
 namespace Bibliocine.ExternalServices.GoogleBooks.Services;
 
@@ -17,15 +18,31 @@ public class LivroService : IObraService<Livro>
     
     public async Task<IEnumerable<Livro>> Pesquisar(string filtro)
     {
-        var result = await _service.Find(filtro);
+        var googleBooksApiResult = await _service.Find(filtro);
 
-        List<Livro> livros = new();
-        foreach (var item in result.Data.Items)
+        if (googleBooksApiResult.HttpCode != HttpStatusCode.OK)
         {
-            var livro = new Livro(item.VolumeInfo.Title, null, 12, EGenero.Animacao, ENota.BOM, DateTime.Now, null, EFormatoLivro.eBook, 10, "");
-            livros.Add(livro);
+            return Enumerable.Empty<Livro>();
         }
-
-        return livros;
+        
+        return googleBooksApiResult.Data!.Books.Select(x => MapToLivro(x));
+    }
+    
+    private Livro MapToLivro(BookResult book)
+    {
+        return new Livro()
+        {
+            Id = book.Id,
+            TipoObra = ETipoObra.LIVRO,
+            Titulo = book.VolumeInfo?.Title,
+            ImagemUrl = book.VolumeInfo?.ImageLinks?.Thumbnail,
+            Descricao = book.VolumeInfo?.Description,
+            Generos = book.VolumeInfo?.Categories,
+            Autor = book.VolumeInfo?.Authors?[0],
+            Editora = book.VolumeInfo?.Publisher,
+            NumeroPaginas = book.VolumeInfo.PageCount,
+            Lingua = book.VolumeInfo?.Language,
+            DataLancamento = book.VolumeInfo?.PublishedDate
+        };
     }
 }
