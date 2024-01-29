@@ -4,6 +4,12 @@ namespace Bibliocine.Domain.ValueObjects;
 
 public class Capa : ValueObject
 {
+    public Capa(string nome, string upload)
+    {
+        Nome = nome;
+        Upload = upload;
+    }
+
     public string Nome { get; private set; }
     public string Upload { get; private set; }
     

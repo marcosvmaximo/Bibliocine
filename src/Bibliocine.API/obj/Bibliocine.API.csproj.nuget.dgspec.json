@@ -28,6 +28,15 @@
             "projectReferences": {
               "/Users/marcosmaximo/RiderProjects/Bibliocine/src/Bibliocine.Domain/Bibliocine.Domain.csproj": {
                 "projectPath": "/Users/marcosmaximo/RiderProjects/Bibliocine/src/Bibliocine.Domain/Bibliocine.Domain.csproj"
+              },
+              "/Users/marcosmaximo/RiderProjects/Bibliocine/src/Bibliocine.ExternalServices.GoogleBooks/Bibliocine.ExternalServices.GoogleBooks.csproj": {
+                "projectPath": "/Users/marcosmaximo/RiderProjects/Bibliocine/src/Bibliocine.ExternalServices.GoogleBooks/Bibliocine.ExternalServices.GoogleBooks.csproj"
+              },
+              "/Users/marcosmaximo/RiderProjects/Bibliocine/src/Bibliocine.ExternalServices.IMDB/Bibliocine.ExternalServices.IMDB.csproj": {
+                "projectPath": "/Users/marcosmaximo/RiderProjects/Bibliocine/src/Bibliocine.ExternalServices.IMDB/Bibliocine.ExternalServices.IMDB.csproj"
+              },
+              "/Users/marcosmaximo/RiderProjects/Bibliocine/src/Bibliocine.Infra/Bibliocine.Infra.csproj": {
+                "projectPath": "/Users/marcosmaximo/RiderProjects/Bibliocine/src/Bibliocine.Infra/Bibliocine.Infra.csproj"
               }
             }
           }
@@ -49,6 +58,18 @@
             "Pomelo.EntityFrameworkCore.MySql": {
               "target": "Package",
               "version": "[7.0.0, )"
+            },
+            "Swashbuckle.AspNetCore.Swagger": {
+              "target": "Package",
+              "version": "[6.5.0, )"
+            },
+            "Swashbuckle.AspNetCore.SwaggerGen": {
+              "target": "Package",
+              "version": "[6.5.0, )"
+            },
+            "Swashbuckle.AspNetCore.SwaggerUI": {
+              "target": "Package",
+              "version": "[6.5.0, )"
             }
           },
           "imports": [
@@ -194,6 +215,217 @@
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[7.0.15, 7.0.15]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[7.0.15, 7.0.15]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.101/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/marcosmaximo/RiderProjects/Bibliocine/src/Bibliocine.ExternalServices.GoogleBooks/Bibliocine.ExternalServices.GoogleBooks.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/marcosmaximo/RiderProjects/Bibliocine/src/Bibliocine.ExternalServices.GoogleBooks/Bibliocine.ExternalServices.GoogleBooks.csproj",
+        "projectName": "Bibliocine.ExternalServices.GoogleBooks",
+        "projectPath": "/Users/marcosmaximo/RiderProjects/Bibliocine/src/Bibliocine.ExternalServices.GoogleBooks/Bibliocine.ExternalServices.GoogleBooks.csproj",
+        "packagesPath": "/Users/marcosmaximo/.nuget/packages/",
+        "outputPath": "/Users/marcosmaximo/RiderProjects/Bibliocine/src/Bibliocine.ExternalServices.GoogleBooks/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/marcosmaximo/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {
+              "/Users/marcosmaximo/RiderProjects/Bibliocine/src/Bibliocine.Domain/Bibliocine.Domain.csproj": {
+                "projectPath": "/Users/marcosmaximo/RiderProjects/Bibliocine/src/Bibliocine.Domain/Bibliocine.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[7.0.15, 7.0.15]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[7.0.15, 7.0.15]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.101/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/marcosmaximo/RiderProjects/Bibliocine/src/Bibliocine.ExternalServices.IMDB/Bibliocine.ExternalServices.IMDB.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/marcosmaximo/RiderProjects/Bibliocine/src/Bibliocine.ExternalServices.IMDB/Bibliocine.ExternalServices.IMDB.csproj",
+        "projectName": "Bibliocine.ExternalServices.IMDB",
+        "projectPath": "/Users/marcosmaximo/RiderProjects/Bibliocine/src/Bibliocine.ExternalServices.IMDB/Bibliocine.ExternalServices.IMDB.csproj",
+        "packagesPath": "/Users/marcosmaximo/.nuget/packages/",
+        "outputPath": "/Users/marcosmaximo/RiderProjects/Bibliocine/src/Bibliocine.ExternalServices.IMDB/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/marcosmaximo/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {
+              "/Users/marcosmaximo/RiderProjects/Bibliocine/src/Bibliocine.Domain/Bibliocine.Domain.csproj": {
+                "projectPath": "/Users/marcosmaximo/RiderProjects/Bibliocine/src/Bibliocine.Domain/Bibliocine.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[7.0.15, 7.0.15]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[7.0.15, 7.0.15]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.101/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/marcosmaximo/RiderProjects/Bibliocine/src/Bibliocine.Infra/Bibliocine.Infra.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/marcosmaximo/RiderProjects/Bibliocine/src/Bibliocine.Infra/Bibliocine.Infra.csproj",
+        "projectName": "Bibliocine.Infra",
+        "projectPath": "/Users/marcosmaximo/RiderProjects/Bibliocine/src/Bibliocine.Infra/Bibliocine.Infra.csproj",
+        "packagesPath": "/Users/marcosmaximo/.nuget/packages/",
+        "outputPath": "/Users/marcosmaximo/RiderProjects/Bibliocine/src/Bibliocine.Infra/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/marcosmaximo/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {
+              "/Users/marcosmaximo/RiderProjects/Bibliocine/src/Bibliocine.Domain/Bibliocine.Domain.csproj": {
+                "projectPath": "/Users/marcosmaximo/RiderProjects/Bibliocine/src/Bibliocine.Domain/Bibliocine.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[7.0.15, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[7.0.15, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

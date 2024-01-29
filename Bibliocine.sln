@@ -20,6 +20,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bibliocine.Application", "s
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bibliocine.Core", "src\Bibliocine.Core\Bibliocine.Core.csproj", "{6D1EAFED-F071-472E-9495-A5ECF15791A2}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ExternalServices", "ExternalServices", "{A935D334-0538-432E-A7CC-A3E603E8CA67}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bibliocine.ExternalServices.IMDB", "src\Bibliocine.ExternalServices.IMDB\Bibliocine.ExternalServices.IMDB.csproj", "{1ED52AF8-2F5B-4CF2-80B7-0095BEE28ED9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bibliocine.ExternalServices.GoogleBooks", "src\Bibliocine.ExternalServices.GoogleBooks\Bibliocine.ExternalServices.GoogleBooks.csproj", "{25F1B8F3-79E9-4CE6-ACE5-1319418101A8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -31,6 +37,9 @@ Global
 		{C3A28A3E-A69B-48A8-B058-985A96E44DC7} = {B6CA4A73-8058-48E2-82A9-18950A5B405C}
 		{AD89DB52-69F4-404F-AB75-18BD07348BEB} = {B1DDCFBB-3696-4086-8B71-7A4BCAB70FD7}
 		{6D1EAFED-F071-472E-9495-A5ECF15791A2} = {FBCA0110-13AB-47A8-AF8E-7BB7C23E45AA}
+		{A935D334-0538-432E-A7CC-A3E603E8CA67} = {C7319605-E838-489D-B6B8-757AA81B3B67}
+		{1ED52AF8-2F5B-4CF2-80B7-0095BEE28ED9} = {A935D334-0538-432E-A7CC-A3E603E8CA67}
+		{25F1B8F3-79E9-4CE6-ACE5-1319418101A8} = {A935D334-0538-432E-A7CC-A3E603E8CA67}
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{E4914BC3-7BFB-41CA-A7F0-D20061BF2659}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -53,5 +62,13 @@ Global
 		{6D1EAFED-F071-472E-9495-A5ECF15791A2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6D1EAFED-F071-472E-9495-A5ECF15791A2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6D1EAFED-F071-472E-9495-A5ECF15791A2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1ED52AF8-2F5B-4CF2-80B7-0095BEE28ED9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1ED52AF8-2F5B-4CF2-80B7-0095BEE28ED9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1ED52AF8-2F5B-4CF2-80B7-0095BEE28ED9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1ED52AF8-2F5B-4CF2-80B7-0095BEE28ED9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{25F1B8F3-79E9-4CE6-ACE5-1319418101A8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{25F1B8F3-79E9-4CE6-ACE5-1319418101A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{25F1B8F3-79E9-4CE6-ACE5-1319418101A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{25F1B8F3-79E9-4CE6-ACE5-1319418101A8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

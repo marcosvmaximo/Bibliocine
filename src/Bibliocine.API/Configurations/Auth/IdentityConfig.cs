@@ -1,6 +1,7 @@
+using Bibliocine.Infra.Context;
 using Microsoft.EntityFrameworkCore;
 
-namespace Bibliocine.API.Configurations;
+namespace Bibliocine.API.Configurations.Auth;
 
 public static class IdentityConfig
 {
