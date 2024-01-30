@@ -2,8 +2,6 @@
 /Users/marcosmaximo/RiderProjects/Bibliocine/src/Bibliocine.Infra/bin/Debug/net7.0/Bibliocine.Infra.dll
 /Users/marcosmaximo/RiderProjects/Bibliocine/src/Bibliocine.Infra/bin/Debug/net7.0/Bibliocine.Infra.pdb
 /Users/marcosmaximo/RiderProjects/Bibliocine/src/Bibliocine.Infra/bin/Debug/net7.0/Bibliocine.Core.dll
-/Users/marcosmaximo/RiderProjects/Bibliocine/src/Bibliocine.Infra/bin/Debug/net7.0/Bibliocine.Domain.dll
-/Users/marcosmaximo/RiderProjects/Bibliocine/src/Bibliocine.Infra/bin/Debug/net7.0/Bibliocine.Domain.pdb
 /Users/marcosmaximo/RiderProjects/Bibliocine/src/Bibliocine.Infra/bin/Debug/net7.0/Bibliocine.Core.pdb
 /Users/marcosmaximo/RiderProjects/Bibliocine/src/Bibliocine.Infra/obj/Debug/net7.0/Bibliocine.Infra.csproj.AssemblyReference.cache
 /Users/marcosmaximo/RiderProjects/Bibliocine/src/Bibliocine.Infra/obj/Debug/net7.0/Bibliocine.Infra.GeneratedMSBuildEditorConfig.editorconfig
@@ -16,3 +14,7 @@
 /Users/marcosmaximo/RiderProjects/Bibliocine/src/Bibliocine.Infra/obj/Debug/net7.0/refint/Bibliocine.Infra.dll
 /Users/marcosmaximo/RiderProjects/Bibliocine/src/Bibliocine.Infra/obj/Debug/net7.0/Bibliocine.Infra.pdb
 /Users/marcosmaximo/RiderProjects/Bibliocine/src/Bibliocine.Infra/obj/Debug/net7.0/ref/Bibliocine.Infra.dll
+/Users/marcosmaximo/RiderProjects/Bibliocine/src/Bibliocine.Infra/bin/Debug/net7.0/Bibliocine.Infra.runtimeconfig.json
+/Users/marcosmaximo/RiderProjects/Bibliocine/src/Bibliocine.Infra/obj/Debug/net7.0/Bibliocine.Infra.genruntimeconfig.cache
+/Users/marcosmaximo/RiderProjects/Bibliocine/src/Bibliocine.Infra/bin/Debug/net7.0/Bibliocine.Business.dll
+/Users/marcosmaximo/RiderProjects/Bibliocine/src/Bibliocine.Infra/bin/Debug/net7.0/Bibliocine.Business.pdb

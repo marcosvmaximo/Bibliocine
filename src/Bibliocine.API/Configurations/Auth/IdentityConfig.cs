@@ -1,4 +1,6 @@
+using Bibliocine.Business.Entities;
 using Bibliocine.Infra.Context;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
 namespace Bibliocine.API.Configurations.Auth;
@@ -12,7 +14,12 @@ public static class IdentityConfig
         services.AddDbContext<ApplicationDbContext>(opt => 
             opt.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString))
             );
-        
+
+        services.AddIdentity<IdentityUser, IdentityRole>()
+            .AddRoles<IdentityRole>()
+            .AddEntityFrameworkStores<ApplicationDbContext>()
+            .AddDefaultTokenProviders();
+
         return services;
     }
 }

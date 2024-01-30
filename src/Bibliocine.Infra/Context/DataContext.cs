@@ -1,20 +1,19 @@
 using Bibliocine.Core;
 using Bibliocine.Core.Data;
 using Bibliocine.Core.Messages.Common;
-using Bibliocine.Domain;
-using Bibliocine.Domain.Entities;
+using Bibliocine.Business;
+using Bibliocine.Business.Entities;
 using Microsoft.EntityFrameworkCore;
 
 namespace Bibliocine.Infra.Context;
 
-public class DataContext  : DbContext, IUnityOfWork
+public class DataContext : DbContext, IUnityOfWork
 {
     public DataContext(DbContextOptions<DataContext> opt) : base(opt)
     {
     }
     
-    public DbSet<Livro> Livros { get; set; }
-    public DbSet<Filme> Filmes { get; set; }
+    public DbSet<Favorito> Favoritos { get; set; }
     public DbSet<Usuario> Usuarios { get; set; }
     
     protected override void OnModelCreating(ModelBuilder modelBuilder)

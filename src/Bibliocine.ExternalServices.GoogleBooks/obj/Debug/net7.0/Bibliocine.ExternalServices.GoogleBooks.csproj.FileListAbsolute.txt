@@ -11,8 +11,8 @@
 /Users/marcosmaximo/RiderProjects/Bibliocine/src/Bibliocine.ExternalServices.GoogleBooks/obj/Debug/net7.0/Bibliocine.ExternalServices.GoogleBooks.pdb
 /Users/marcosmaximo/RiderProjects/Bibliocine/src/Bibliocine.ExternalServices.GoogleBooks/obj/Debug/net7.0/ref/Bibliocine.ExternalServices.GoogleBooks.dll
 /Users/marcosmaximo/RiderProjects/Bibliocine/src/Bibliocine.ExternalServices.GoogleBooks/bin/Debug/net7.0/Bibliocine.Core.dll
-/Users/marcosmaximo/RiderProjects/Bibliocine/src/Bibliocine.ExternalServices.GoogleBooks/bin/Debug/net7.0/Bibliocine.Domain.dll
-/Users/marcosmaximo/RiderProjects/Bibliocine/src/Bibliocine.ExternalServices.GoogleBooks/bin/Debug/net7.0/Bibliocine.Domain.pdb
 /Users/marcosmaximo/RiderProjects/Bibliocine/src/Bibliocine.ExternalServices.GoogleBooks/bin/Debug/net7.0/Bibliocine.Core.pdb
 /Users/marcosmaximo/RiderProjects/Bibliocine/src/Bibliocine.ExternalServices.GoogleBooks/obj/Debug/net7.0/Bibliocine.ExternalServices.GoogleBooks.csproj.AssemblyReference.cache
 /Users/marcosmaximo/RiderProjects/Bibliocine/src/Bibliocine.ExternalServices.GoogleBooks/obj/Debug/net7.0/Bibliocine.ExternalServices.GoogleBooks.csproj.CopyComplete
+/Users/marcosmaximo/RiderProjects/Bibliocine/src/Bibliocine.ExternalServices.GoogleBooks/bin/Debug/net7.0/Bibliocine.Business.dll
+/Users/marcosmaximo/RiderProjects/Bibliocine/src/Bibliocine.ExternalServices.GoogleBooks/bin/Debug/net7.0/Bibliocine.Business.pdb

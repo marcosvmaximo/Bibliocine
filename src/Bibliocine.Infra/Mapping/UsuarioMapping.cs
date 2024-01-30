@@ -1,4 +1,4 @@
-using Bibliocine.Domain.Entities;
+using Bibliocine.Business.Entities;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 

@@ -2,8 +2,6 @@
 /Users/marcosmaximo/RiderProjects/Bibliocine/src/Bibliocine.ExternalServices.IMDB/bin/Debug/net7.0/Bibliocine.ExternalServices.IMDB.dll
 /Users/marcosmaximo/RiderProjects/Bibliocine/src/Bibliocine.ExternalServices.IMDB/bin/Debug/net7.0/Bibliocine.ExternalServices.IMDB.pdb
 /Users/marcosmaximo/RiderProjects/Bibliocine/src/Bibliocine.ExternalServices.IMDB/bin/Debug/net7.0/Bibliocine.Core.dll
-/Users/marcosmaximo/RiderProjects/Bibliocine/src/Bibliocine.ExternalServices.IMDB/bin/Debug/net7.0/Bibliocine.Domain.dll
-/Users/marcosmaximo/RiderProjects/Bibliocine/src/Bibliocine.ExternalServices.IMDB/bin/Debug/net7.0/Bibliocine.Domain.pdb
 /Users/marcosmaximo/RiderProjects/Bibliocine/src/Bibliocine.ExternalServices.IMDB/bin/Debug/net7.0/Bibliocine.Core.pdb
 /Users/marcosmaximo/RiderProjects/Bibliocine/src/Bibliocine.ExternalServices.IMDB/obj/Debug/net7.0/Bibliocine.ExternalServices.IMDB.csproj.AssemblyReference.cache
 /Users/marcosmaximo/RiderProjects/Bibliocine/src/Bibliocine.ExternalServices.IMDB/obj/Debug/net7.0/Bibliocine.ExternalServices.IMDB.GeneratedMSBuildEditorConfig.editorconfig
@@ -18,3 +16,5 @@
 /Users/marcosmaximo/RiderProjects/Bibliocine/src/Bibliocine.ExternalServices.IMDB/obj/Debug/net7.0/ref/Bibliocine.ExternalServices.IMDB.dll
 /Users/marcosmaximo/RiderProjects/Bibliocine/src/Bibliocine.ExternalServices.IMDB/bin/Debug/net7.0/Microsoft.Extensions.Options.dll
 /Users/marcosmaximo/RiderProjects/Bibliocine/src/Bibliocine.ExternalServices.IMDB/bin/Debug/net7.0/Microsoft.Extensions.Primitives.dll
+/Users/marcosmaximo/RiderProjects/Bibliocine/src/Bibliocine.ExternalServices.IMDB/bin/Debug/net7.0/Bibliocine.Business.dll
+/Users/marcosmaximo/RiderProjects/Bibliocine/src/Bibliocine.ExternalServices.IMDB/bin/Debug/net7.0/Bibliocine.Business.pdb

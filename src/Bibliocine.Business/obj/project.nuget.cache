@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "dgSpecHash": "9m4/rw1qYySEwMrQVYilzwyk56jSo2M108B3/j6fSKiUX2Ej6q6tU1Z8K4vXK9aXxf1MFcgT9vq+YudVHVEbwA==",
+  "success": true,
+  "projectFilePath": "/Users/marcosmaximo/RiderProjects/Bibliocine/src/Bibliocine.Business/Bibliocine.Business.csproj",
+  "expectedPackageFiles": [
+    "/Users/marcosmaximo/.nuget/packages/mediatr/12.2.0/mediatr.12.2.0.nupkg.sha512",
+    "/Users/marcosmaximo/.nuget/packages/mediatr.contracts/2.0.1/mediatr.contracts.2.0.1.nupkg.sha512",
+    "/Users/marcosmaximo/.nuget/packages/microsoft.extensions.dependencyinjection.abstractions/8.0.0/microsoft.extensions.dependencyinjection.abstractions.8.0.0.nupkg.sha512",
+    "/Users/marcosmaximo/.nuget/packages/microsoft.netcore.app.ref/7.0.15/microsoft.netcore.app.ref.7.0.15.nupkg.sha512",
+    "/Users/marcosmaximo/.nuget/packages/microsoft.aspnetcore.app.ref/7.0.15/microsoft.aspnetcore.app.ref.7.0.15.nupkg.sha512"
+  ],
+  "logs": []
+}

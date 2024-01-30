@@ -48,6 +48,19 @@
           "buildTransitive/net6.0/_._": {}
         }
       },
+      "Bibliocine.Business/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "Bibliocine.Core": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Bibliocine.Business.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Bibliocine.Business.dll": {}
+        }
+      },
       "Bibliocine.Core/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v7.0",
@@ -59,19 +72,6 @@
         },
         "runtime": {
           "bin/placeholder/Bibliocine.Core.dll": {}
-        }
-      },
-      "Bibliocine.Domain/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v7.0",
-        "dependencies": {
-          "Bibliocine.Core": "1.0.0"
-        },
-        "compile": {
-          "bin/placeholder/Bibliocine.Domain.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/Bibliocine.Domain.dll": {}
         }
       }
     }
@@ -139,20 +139,20 @@
         "useSharedDesignerContext.txt"
       ]
     },
+    "Bibliocine.Business/1.0.0": {
+      "type": "project",
+      "path": "../Bibliocine.Business/Bibliocine.Business.csproj",
+      "msbuildProject": "../Bibliocine.Business/Bibliocine.Business.csproj"
+    },
     "Bibliocine.Core/1.0.0": {
       "type": "project",
       "path": "../Bibliocine.Core/Bibliocine.Core.csproj",
       "msbuildProject": "../Bibliocine.Core/Bibliocine.Core.csproj"
-    },
-    "Bibliocine.Domain/1.0.0": {
-      "type": "project",
-      "path": "../Bibliocine.Domain/Bibliocine.Domain.csproj",
-      "msbuildProject": "../Bibliocine.Domain/Bibliocine.Domain.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net7.0": [
-      "Bibliocine.Domain >= 1.0.0"
+      "Bibliocine.Business >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -180,8 +180,8 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "/Users/marcosmaximo/RiderProjects/Bibliocine/src/Bibliocine.Domain/Bibliocine.Domain.csproj": {
-              "projectPath": "/Users/marcosmaximo/RiderProjects/Bibliocine/src/Bibliocine.Domain/Bibliocine.Domain.csproj"
+            "/Users/marcosmaximo/RiderProjects/Bibliocine/src/Bibliocine.Business/Bibliocine.Business.csproj": {
+              "projectPath": "/Users/marcosmaximo/RiderProjects/Bibliocine/src/Bibliocine.Business/Bibliocine.Business.csproj"
             }
           }
         }

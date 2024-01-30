@@ -7,7 +7,7 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\Bibliocine.Domain\Bibliocine.Domain.csproj" />
+      <ProjectReference Include="..\Bibliocine.Business\Bibliocine.Business.csproj" />
     </ItemGroup>
 
 </Project>

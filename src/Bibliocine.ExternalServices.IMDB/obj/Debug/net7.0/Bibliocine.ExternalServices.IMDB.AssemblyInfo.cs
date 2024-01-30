@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Bibliocine.ExternalServices.IMDB")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8fe42c63de19fb4c69cb014a713579c1d5c55946")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d427d8f807350f33b327dffb6edfbc93db760be1")]
 [assembly: System.Reflection.AssemblyProductAttribute("Bibliocine.ExternalServices.IMDB")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Bibliocine.ExternalServices.IMDB")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

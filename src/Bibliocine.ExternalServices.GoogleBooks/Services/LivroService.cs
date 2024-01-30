@@ -1,7 +1,7 @@
 using System.Net;
-using Bibliocine.Domain.Entities;
-using Bibliocine.Domain.Enum;
-using Bibliocine.Domain.Interfaces;
+using Bibliocine.Business.Entities;
+using Bibliocine.Business.Enum;
+using Bibliocine.Business.Services.Interfaces;
 using Bibliocine.ExternalServices.GoogleBooks.Interfaces;
 using Bibliocine.ExternalServices.GoogleBooks.Models;
 
@@ -27,7 +27,17 @@ public class LivroService : IObraService<Livro>
         
         return googleBooksApiResult.Data!.Books.Select(x => MapToLivro(x));
     }
-    
+
+    public Task<Livro> ObterPorId(string obraId, ETipoObra tipoObra)
+    {
+        throw new NotImplementedException();
+    }
+
+    public Task<Livro> ObterPorId(string obraId)
+    {
+        throw new NotImplementedException();
+    }
+
     private Livro MapToLivro(BookResult book)
     {
         return new Livro()
@@ -38,7 +48,7 @@ public class LivroService : IObraService<Livro>
             ImagemUrl = book.VolumeInfo?.ImageLinks?.Thumbnail,
             Descricao = book.VolumeInfo?.Description,
             Generos = book.VolumeInfo?.Categories,
-            Autor = book.VolumeInfo?.Authors?[0],
+            AutorOuDiretor = book.VolumeInfo?.Authors?[0],
             Editora = book.VolumeInfo?.Publisher,
             NumeroPaginas = book.VolumeInfo.PageCount,
             Lingua = book.VolumeInfo?.Language,

@@ -8,7 +8,7 @@
     ".NETCoreApp,Version=v7.0": {
       "Bibliocine.ExternalServices.GoogleBooks/1.0.0": {
         "dependencies": {
-          "Bibliocine.Domain": "1.0.0"
+          "Bibliocine.Business": "1.0.0"
         },
         "runtime": {
           "Bibliocine.ExternalServices.GoogleBooks.dll": {}
@@ -42,20 +42,20 @@
           }
         }
       },
+      "Bibliocine.Business/1.0.0": {
+        "dependencies": {
+          "Bibliocine.Core": "1.0.0"
+        },
+        "runtime": {
+          "Bibliocine.Business.dll": {}
+        }
+      },
       "Bibliocine.Core/1.0.0": {
         "dependencies": {
           "MediatR": "12.2.0"
         },
         "runtime": {
           "Bibliocine.Core.dll": {}
-        }
-      },
-      "Bibliocine.Domain/1.0.0": {
-        "dependencies": {
-          "Bibliocine.Core": "1.0.0"
-        },
-        "runtime": {
-          "Bibliocine.Domain.dll": {}
         }
       }
     }
@@ -87,12 +87,12 @@
       "path": "microsoft.extensions.dependencyinjection.abstractions/8.0.0",
       "hashPath": "microsoft.extensions.dependencyinjection.abstractions.8.0.0.nupkg.sha512"
     },
-    "Bibliocine.Core/1.0.0": {
+    "Bibliocine.Business/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
     },
-    "Bibliocine.Domain/1.0.0": {
+    "Bibliocine.Core/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

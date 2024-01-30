@@ -7,7 +7,7 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\Bibliocine.Domain\Bibliocine.Domain.csproj" />
+      <ProjectReference Include="..\Bibliocine.Business\Bibliocine.Business.csproj" />
       <ProjectReference Include="..\Bibliocine.ExternalServices.GoogleBooks\Bibliocine.ExternalServices.GoogleBooks.csproj" />
       <ProjectReference Include="..\Bibliocine.ExternalServices.IMDB\Bibliocine.ExternalServices.IMDB.csproj" />
       <ProjectReference Include="..\Bibliocine.Infra\Bibliocine.Infra.csproj" />
@@ -19,6 +19,16 @@
       <PackageReference Include="Swashbuckle.AspNetCore.Swagger" Version="6.5.0" />
       <PackageReference Include="Swashbuckle.AspNetCore.SwaggerGen" Version="6.5.0" />
       <PackageReference Include="Swashbuckle.AspNetCore.SwaggerUI" Version="6.5.0" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="Model\" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Reference Include="Bibliocine.Business">
+        <HintPath>bin\Debug\net7.0\Bibliocine.Business.dll</HintPath>
+      </Reference>
     </ItemGroup>
 
 </Project>

@@ -20,10 +20,8 @@
 /Users/marcosmaximo/RiderProjects/Bibliocine/src/Bibliocine.API/bin/Debug/net7.0/MySqlConnector.dll
 /Users/marcosmaximo/RiderProjects/Bibliocine/src/Bibliocine.API/bin/Debug/net7.0/Pomelo.EntityFrameworkCore.MySql.dll
 /Users/marcosmaximo/RiderProjects/Bibliocine/src/Bibliocine.API/bin/Debug/net7.0/Bibliocine.Core.dll
-/Users/marcosmaximo/RiderProjects/Bibliocine/src/Bibliocine.API/bin/Debug/net7.0/Bibliocine.Domain.dll
 /Users/marcosmaximo/RiderProjects/Bibliocine/src/Bibliocine.API/bin/Debug/net7.0/Bibliocine.ExternalServices.IMDB.dll
 /Users/marcosmaximo/RiderProjects/Bibliocine/src/Bibliocine.API/bin/Debug/net7.0/Bibliocine.Infra.dll
-/Users/marcosmaximo/RiderProjects/Bibliocine/src/Bibliocine.API/bin/Debug/net7.0/Bibliocine.Domain.pdb
 /Users/marcosmaximo/RiderProjects/Bibliocine/src/Bibliocine.API/bin/Debug/net7.0/Bibliocine.ExternalServices.IMDB.pdb
 /Users/marcosmaximo/RiderProjects/Bibliocine/src/Bibliocine.API/bin/Debug/net7.0/Bibliocine.Infra.pdb
 /Users/marcosmaximo/RiderProjects/Bibliocine/src/Bibliocine.API/bin/Debug/net7.0/Bibliocine.Core.pdb
@@ -55,3 +53,4 @@
 /Users/marcosmaximo/RiderProjects/Bibliocine/src/Bibliocine.API/obj/Debug/net7.0/Bibliocine.API.MvcApplicationPartsAssemblyInfo.cs
 /Users/marcosmaximo/RiderProjects/Bibliocine/src/Bibliocine.API/bin/Debug/net7.0/Bibliocine.ExternalServices.GoogleBooks.dll
 /Users/marcosmaximo/RiderProjects/Bibliocine/src/Bibliocine.API/bin/Debug/net7.0/Bibliocine.ExternalServices.GoogleBooks.pdb
+/Users/marcosmaximo/RiderProjects/Bibliocine/src/Bibliocine.API/bin/Debug/net7.0/Bibliocine.Business.pdb

@@ -8,12 +8,23 @@
     ".NETCoreApp,Version=v7.0": {
       "Bibliocine.Infra/1.0.0": {
         "dependencies": {
-          "Bibliocine.Domain": "1.0.0",
+          "Bibliocine.Business": "1.0.0",
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "7.0.15",
-          "Microsoft.EntityFrameworkCore": "7.0.15"
+          "Microsoft.EntityFrameworkCore": "7.0.15",
+          "Microsoft.EntityFrameworkCore.Design": "7.0.15",
+          "Microsoft.EntityFrameworkCore.Tools": "7.0.15",
+          "Pomelo.EntityFrameworkCore.MySql": "7.0.0"
         },
         "runtime": {
           "Bibliocine.Infra.dll": {}
+        }
+      },
+      "Humanizer.Core/2.14.1": {
+        "runtime": {
+          "lib/net6.0/Humanizer.dll": {
+            "assemblyVersion": "2.14.0.0",
+            "fileVersion": "2.14.1.48190"
+          }
         }
       },
       "MediatR/12.2.0": {
@@ -91,6 +102,20 @@
         }
       },
       "Microsoft.EntityFrameworkCore.Analyzers/7.0.15": {},
+      "Microsoft.EntityFrameworkCore.Design/7.0.15": {
+        "dependencies": {
+          "Humanizer.Core": "2.14.1",
+          "Microsoft.EntityFrameworkCore.Relational": "7.0.15",
+          "Microsoft.Extensions.DependencyModel": "7.0.0",
+          "Mono.TextTemplating": "2.2.1"
+        },
+        "runtime": {
+          "lib/net6.0/Microsoft.EntityFrameworkCore.Design.dll": {
+            "assemblyVersion": "7.0.15.0",
+            "fileVersion": "7.0.1523.57109"
+          }
+        }
+      },
       "Microsoft.EntityFrameworkCore.Relational/7.0.15": {
         "dependencies": {
           "Microsoft.EntityFrameworkCore": "7.0.15",
@@ -101,6 +126,11 @@
             "assemblyVersion": "7.0.15.0",
             "fileVersion": "7.0.1523.57109"
           }
+        }
+      },
+      "Microsoft.EntityFrameworkCore.Tools/7.0.15": {
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore.Design": "7.0.15"
         }
       },
       "Microsoft.Extensions.Caching.Abstractions/7.0.0": {
@@ -156,6 +186,18 @@
           "lib/net7.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll": {
             "assemblyVersion": "8.0.0.0",
             "fileVersion": "8.0.23.53103"
+          }
+        }
+      },
+      "Microsoft.Extensions.DependencyModel/7.0.0": {
+        "dependencies": {
+          "System.Text.Encodings.Web": "7.0.0",
+          "System.Text.Json": "7.0.0"
+        },
+        "runtime": {
+          "lib/net7.0/Microsoft.Extensions.DependencyModel.dll": {
+            "assemblyVersion": "7.0.0.0",
+            "fileVersion": "7.0.22.51805"
           }
         }
       },
@@ -227,20 +269,65 @@
           }
         }
       },
+      "Mono.TextTemplating/2.2.1": {
+        "dependencies": {
+          "System.CodeDom": "4.4.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Mono.TextTemplating.dll": {
+            "assemblyVersion": "2.2.0.0",
+            "fileVersion": "2.2.1.1"
+          }
+        }
+      },
+      "MySqlConnector/2.2.5": {
+        "runtime": {
+          "lib/net7.0/MySqlConnector.dll": {
+            "assemblyVersion": "2.0.0.0",
+            "fileVersion": "2.2.5.0"
+          }
+        }
+      },
+      "Pomelo.EntityFrameworkCore.MySql/7.0.0": {
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore.Relational": "7.0.15",
+          "MySqlConnector": "2.2.5"
+        },
+        "runtime": {
+          "lib/net7.0/Pomelo.EntityFrameworkCore.MySql.dll": {
+            "assemblyVersion": "7.0.0.0",
+            "fileVersion": "7.0.0.0"
+          }
+        }
+      },
+      "System.CodeDom/4.4.0": {
+        "runtime": {
+          "lib/netstandard2.0/System.CodeDom.dll": {
+            "assemblyVersion": "4.0.0.0",
+            "fileVersion": "4.6.25519.3"
+          }
+        }
+      },
+      "System.Text.Encodings.Web/7.0.0": {},
+      "System.Text.Json/7.0.0": {
+        "dependencies": {
+          "System.Text.Encodings.Web": "7.0.0"
+        }
+      },
+      "Bibliocine.Business/1.0.0": {
+        "dependencies": {
+          "Bibliocine.Core": "1.0.0"
+        },
+        "runtime": {
+          "Bibliocine.Business.dll": {}
+        }
+      },
       "Bibliocine.Core/1.0.0": {
         "dependencies": {
           "MediatR": "12.2.0"
         },
         "runtime": {
           "Bibliocine.Core.dll": {}
-        }
-      },
-      "Bibliocine.Domain/1.0.0": {
-        "dependencies": {
-          "Bibliocine.Core": "1.0.0"
-        },
-        "runtime": {
-          "Bibliocine.Domain.dll": {}
         }
       }
     }
@@ -250,6 +337,13 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "Humanizer.Core/2.14.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-lQKvtaTDOXnoVJ20ibTuSIOf2i0uO0MPbDhd1jm238I+U/2ZnRENj0cktKZhtchBMtCUSRQ5v4xBCUbKNmyVMw==",
+      "path": "humanizer.core/2.14.1",
+      "hashPath": "humanizer.core.2.14.1.nupkg.sha512"
     },
     "MediatR/12.2.0": {
       "type": "package",
@@ -307,12 +401,26 @@
       "path": "microsoft.entityframeworkcore.analyzers/7.0.15",
       "hashPath": "microsoft.entityframeworkcore.analyzers.7.0.15.nupkg.sha512"
     },
+    "Microsoft.EntityFrameworkCore.Design/7.0.15": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-knFwFoPpYqpV09xqZxowqA3Sbxg8cAKmJFuQDl43ZqgtCcMAEnVeH8aBLzSmpggauzC28/MWVtP88N/C+ko4dA==",
+      "path": "microsoft.entityframeworkcore.design/7.0.15",
+      "hashPath": "microsoft.entityframeworkcore.design.7.0.15.nupkg.sha512"
+    },
     "Microsoft.EntityFrameworkCore.Relational/7.0.15": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-D03N/DF3lmtHHVd0RqHxZg+rtd3r8C4h7RJoy/ShxQA0r6rpJ/99ZA6HY9WeEgqsRbm2M8Lmj9MwJomcsJ+4GQ==",
       "path": "microsoft.entityframeworkcore.relational/7.0.15",
       "hashPath": "microsoft.entityframeworkcore.relational.7.0.15.nupkg.sha512"
+    },
+    "Microsoft.EntityFrameworkCore.Tools/7.0.15": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-7/gt7XfvQ1Sb7+kk6HkU8s6MlCkXRoEHKcJ0fXjGhLgDPq6e1G9/WJZvCxuLJzOFjxn4MIJMiEbdN8KVrIQ9CA==",
+      "path": "microsoft.entityframeworkcore.tools/7.0.15",
+      "hashPath": "microsoft.entityframeworkcore.tools.7.0.15.nupkg.sha512"
     },
     "Microsoft.Extensions.Caching.Abstractions/7.0.0": {
       "type": "package",
@@ -348,6 +456,13 @@
       "sha512": "sha512-cjWrLkJXK0rs4zofsK4bSdg+jhDLTaxrkXu4gS6Y7MAlCvRyNNgwY/lJi5RDlQOnSZweHqoyvgvbdvQsRIW+hg==",
       "path": "microsoft.extensions.dependencyinjection.abstractions/8.0.0",
       "hashPath": "microsoft.extensions.dependencyinjection.abstractions.8.0.0.nupkg.sha512"
+    },
+    "Microsoft.Extensions.DependencyModel/7.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-oONNYd71J3LzkWc4fUHl3SvMfiQMYUCo/mDHDEu76hYYxdhdrPYv6fvGv9nnKVyhE9P0h20AU8RZB5OOWQcAXg==",
+      "path": "microsoft.extensions.dependencymodel/7.0.0",
+      "hashPath": "microsoft.extensions.dependencymodel.7.0.0.nupkg.sha512"
     },
     "Microsoft.Extensions.Identity.Core/7.0.15": {
       "type": "package",
@@ -391,12 +506,54 @@
       "path": "microsoft.extensions.primitives/7.0.0",
       "hashPath": "microsoft.extensions.primitives.7.0.0.nupkg.sha512"
     },
-    "Bibliocine.Core/1.0.0": {
+    "Mono.TextTemplating/2.2.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-KZYeKBET/2Z0gY1WlTAK7+RHTl7GSbtvTLDXEZZojUdAPqpQNDL6tHv7VUpqfX5VEOh+uRGKaZXkuD253nEOBQ==",
+      "path": "mono.texttemplating/2.2.1",
+      "hashPath": "mono.texttemplating.2.2.1.nupkg.sha512"
+    },
+    "MySqlConnector/2.2.5": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-6sinY78RvryhHwpup3awdjYO7d5hhWahb5p/1VDODJhSxJggV/sBbYuKK5IQF9TuzXABiddqUbmRfM884tqA3Q==",
+      "path": "mysqlconnector/2.2.5",
+      "hashPath": "mysqlconnector.2.2.5.nupkg.sha512"
+    },
+    "Pomelo.EntityFrameworkCore.MySql/7.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Qk5WB/skSZet5Yrz6AN2ywjZaB1pxfAmvQ+5I4khTkLwwIamI4QJoH2NphCWLFQL+2ar8HvsNCTmwYk0qhqL0w==",
+      "path": "pomelo.entityframeworkcore.mysql/7.0.0",
+      "hashPath": "pomelo.entityframeworkcore.mysql.7.0.0.nupkg.sha512"
+    },
+    "System.CodeDom/4.4.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-2sCCb7doXEwtYAbqzbF/8UAeDRMNmPaQbU2q50Psg1J9KzumyVVCgKQY8s53WIPTufNT0DpSe9QRvVjOzfDWBA==",
+      "path": "system.codedom/4.4.0",
+      "hashPath": "system.codedom.4.4.0.nupkg.sha512"
+    },
+    "System.Text.Encodings.Web/7.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-OP6umVGxc0Z0MvZQBVigj4/U31Pw72ITihDWP9WiWDm+q5aoe0GaJivsfYGq53o6dxH7DcXWiCTl7+0o2CGdmg==",
+      "path": "system.text.encodings.web/7.0.0",
+      "hashPath": "system.text.encodings.web.7.0.0.nupkg.sha512"
+    },
+    "System.Text.Json/7.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-DaGSsVqKsn/ia6RG8frjwmJonfos0srquhw09TlT8KRw5I43E+4gs+/bZj4K0vShJ5H9imCuXupb4RmS+dBy3w==",
+      "path": "system.text.json/7.0.0",
+      "hashPath": "system.text.json.7.0.0.nupkg.sha512"
+    },
+    "Bibliocine.Business/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
     },
-    "Bibliocine.Domain/1.0.0": {
+    "Bibliocine.Core/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

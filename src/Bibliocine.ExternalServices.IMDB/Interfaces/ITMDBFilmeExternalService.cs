@@ -6,6 +6,7 @@ namespace Bibliocine.ExternalServices.IMDB;
 
 public interface ITMDBFilmeExternalService
 {
-    Task<ResponseGeneric<TMDBResult>> FindMovies(string filtro, int page = 1);
-    Task<ResponseGeneric<GenreResult>> FindGenres();
+    Task<ResponseGeneric<TMDBMoviesResult>> FindMovies(string filtro, int page = 1);
+    Task<ResponseGeneric<TMDBMovieResult>> FindMovieById(string id);
+    Task<ResponseGeneric<TMDBGenreResult>> FindGenres();
 }

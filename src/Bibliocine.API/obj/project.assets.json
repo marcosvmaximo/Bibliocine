@@ -440,6 +440,19 @@
           "Microsoft.AspNetCore.App"
         ]
       },
+      "Bibliocine.Business/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "Bibliocine.Core": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Bibliocine.Business.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Bibliocine.Business.dll": {}
+        }
+      },
       "Bibliocine.Core/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v7.0",
@@ -453,24 +466,11 @@
           "bin/placeholder/Bibliocine.Core.dll": {}
         }
       },
-      "Bibliocine.Domain/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v7.0",
-        "dependencies": {
-          "Bibliocine.Core": "1.0.0"
-        },
-        "compile": {
-          "bin/placeholder/Bibliocine.Domain.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/Bibliocine.Domain.dll": {}
-        }
-      },
       "Bibliocine.ExternalServices.GoogleBooks/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v7.0",
         "dependencies": {
-          "Bibliocine.Domain": "1.0.0"
+          "Bibliocine.Business": "1.0.0"
         },
         "compile": {
           "bin/placeholder/Bibliocine.ExternalServices.GoogleBooks.dll": {}
@@ -483,7 +483,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v7.0",
         "dependencies": {
-          "Bibliocine.Domain": "1.0.0"
+          "Bibliocine.Business": "1.0.0"
         },
         "compile": {
           "bin/placeholder/Bibliocine.ExternalServices.IMDB.dll": {}
@@ -496,9 +496,10 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v7.0",
         "dependencies": {
-          "Bibliocine.Domain": "1.0.0",
+          "Bibliocine.Business": "1.0.0",
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "7.0.15",
-          "Microsoft.EntityFrameworkCore": "7.0.15"
+          "Microsoft.EntityFrameworkCore": "7.0.15",
+          "Pomelo.EntityFrameworkCore.MySql": "7.0.0"
         },
         "compile": {
           "bin/placeholder/Bibliocine.Infra.dll": {}
@@ -1124,15 +1125,15 @@
         "swashbuckle.aspnetcore.swaggerui.nuspec"
       ]
     },
+    "Bibliocine.Business/1.0.0": {
+      "type": "project",
+      "path": "../Bibliocine.Business/Bibliocine.Business.csproj",
+      "msbuildProject": "../Bibliocine.Business/Bibliocine.Business.csproj"
+    },
     "Bibliocine.Core/1.0.0": {
       "type": "project",
       "path": "../Bibliocine.Core/Bibliocine.Core.csproj",
       "msbuildProject": "../Bibliocine.Core/Bibliocine.Core.csproj"
-    },
-    "Bibliocine.Domain/1.0.0": {
-      "type": "project",
-      "path": "../Bibliocine.Domain/Bibliocine.Domain.csproj",
-      "msbuildProject": "../Bibliocine.Domain/Bibliocine.Domain.csproj"
     },
     "Bibliocine.ExternalServices.GoogleBooks/1.0.0": {
       "type": "project",
@@ -1152,7 +1153,7 @@
   },
   "projectFileDependencyGroups": {
     "net7.0": [
-      "Bibliocine.Domain >= 1.0.0",
+      "Bibliocine.Business >= 1.0.0",
       "Bibliocine.ExternalServices.GoogleBooks >= 1.0.0",
       "Bibliocine.ExternalServices.IMDB >= 1.0.0",
       "Bibliocine.Infra >= 1.0.0",
@@ -1188,8 +1189,8 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "/Users/marcosmaximo/RiderProjects/Bibliocine/src/Bibliocine.Domain/Bibliocine.Domain.csproj": {
-              "projectPath": "/Users/marcosmaximo/RiderProjects/Bibliocine/src/Bibliocine.Domain/Bibliocine.Domain.csproj"
+            "/Users/marcosmaximo/RiderProjects/Bibliocine/src/Bibliocine.Business/Bibliocine.Business.csproj": {
+              "projectPath": "/Users/marcosmaximo/RiderProjects/Bibliocine/src/Bibliocine.Business/Bibliocine.Business.csproj"
             },
             "/Users/marcosmaximo/RiderProjects/Bibliocine/src/Bibliocine.ExternalServices.GoogleBooks/Bibliocine.ExternalServices.GoogleBooks.csproj": {
               "projectPath": "/Users/marcosmaximo/RiderProjects/Bibliocine/src/Bibliocine.ExternalServices.GoogleBooks/Bibliocine.ExternalServices.GoogleBooks.csproj"
