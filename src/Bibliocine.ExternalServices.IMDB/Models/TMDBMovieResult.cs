@@ -68,7 +68,7 @@ public class TMDBMovieResult
         public bool Video { get; set; }
 
         [JsonPropertyName("vote_average")]
-        public int VoteAverage { get; set; }
+        public double VoteAverage { get; set; }
 
         [JsonPropertyName("vote_count")]
         public int VoteCount { get; set; }

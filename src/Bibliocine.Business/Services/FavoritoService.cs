@@ -7,13 +7,13 @@ using Bibliocine.Core.Messages;
 
 namespace Bibliocine.Business.Services;
 
-public class UsuarioService : IUsuarioService
+public class FavoritoService : IFavoritoService
 {
     private readonly IUsuarioRepository _repository;
     private readonly INotifyHandler _notifyHandler;
     private readonly IObraService<Obra> _obraService;
 
-    public UsuarioService(
+    public FavoritoService(
         INotifyHandler notifyHandler,
         IUsuarioRepository repository,
         IObraService<Obra> obraService)
@@ -21,13 +21,6 @@ public class UsuarioService : IUsuarioService
         _notifyHandler = notifyHandler;
         _repository = repository;
         _obraService = obraService;
-    }
-    
-    public async Task RegistrarUsuario(RegistrarUsuarioViewModel model)
-    {
-        var usuario = new Usuario(model.Nome, model.DataNascimento, model.Email);
-
-        await _repository.Salvar(usuario);
     }
 
     public async Task<bool> AdicionarFavorito(Guid userId, string obraId, ETipoObra tipoObra)
@@ -48,10 +41,12 @@ public class UsuarioService : IUsuarioService
         }
         
         Favorito favorito = new(usuario, usuario.Id, tipoObra, obraId);
-        
         usuario.AdicionarFavorito(favorito);
-        await _repository.Salvar(usuario);
-        // Save
+
+        await _repository.Atualizar(usuario);
+        await _repository.AdicionarFavorito(favorito);
+        
+        await _repository.UnityOfWork.Commit();
         
         return true;
     }

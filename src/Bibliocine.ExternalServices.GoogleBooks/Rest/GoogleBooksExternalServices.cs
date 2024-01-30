@@ -15,7 +15,7 @@ public class GoogleBooksExternalServices : IGoogleBooksExternalServices
 
         using (var client = new HttpClient())
         {
-            var requestUri = $"https://www.googleapis.com/books/v1/volumes?q={filtro}";
+            var requestUri = $"https://www.googleapis.com/books/v1/volumes?q={filtro}+intitle:keyes";
             
             try
             {
@@ -24,6 +24,46 @@ public class GoogleBooksExternalServices : IGoogleBooksExternalServices
                     request.EnsureSuccessStatusCode();
                     var contentBody = await request.Content.ReadAsStringAsync();
                     var objResponse = JsonSerializer.Deserialize<GoogleBookResult>(contentBody);
+
+                    response.HttpCode = request.StatusCode;
+
+                    if (request.IsSuccessStatusCode)
+                        response.Data = objResponse;
+                    else
+                        response.Errors = JsonSerializer.Deserialize<ExpandoObject>(contentBody);
+                    
+                }
+            }
+            catch (HttpRequestException ex)
+            {
+                response.HttpCode = HttpStatusCode.InternalServerError;
+                response.Errors = JsonSerializer.Deserialize<ExpandoObject>(ex.Message);
+            }
+            catch (Exception ex)
+            {
+                response.HttpCode = HttpStatusCode.InternalServerError;
+                response.Errors = JsonSerializer.Deserialize<ExpandoObject>(ex.Message);
+            }
+        }
+
+        return response;
+    }
+
+    public async Task<ResponseGeneric<BookResult>> FindById(string id)
+    {
+        var response = new ResponseGeneric<BookResult>();
+
+        using (var client = new HttpClient())
+        {
+            var requestUri = $"https://www.googleapis.com/books/v1/volumes/{id}";
+            
+            try
+            {
+                using (var request = await client.GetAsync(requestUri))
+                {
+                    request.EnsureSuccessStatusCode();
+                    var contentBody = await request.Content.ReadAsStringAsync();
+                    var objResponse = JsonSerializer.Deserialize<BookResult>(contentBody);
 
                     response.HttpCode = request.StatusCode;
 

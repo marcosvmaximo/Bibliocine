@@ -9,16 +9,14 @@ public class Favorito : Entity
     {
         Usuario = usuario;
         UsuarioId = usuarioId;
+        TipoObra = tipoObra;
         ObraId = obraId;
     }
-
-    public Usuario Usuario { get; private set; }
-    public Guid UsuarioId { get; private set; }
+    
+    protected Favorito(){}
+    
     public ETipoObra TipoObra { get; private set; }
     public string ObraId { get; private set; }
-    
-    public override void Validar()
-    {
-        throw new NotImplementedException();
-    }
+    public Guid UsuarioId { get; private set; }
+    public Usuario Usuario { get; private set; }
 }

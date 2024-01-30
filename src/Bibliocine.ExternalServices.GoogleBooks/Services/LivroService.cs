@@ -33,9 +33,16 @@ public class LivroService : IObraService<Livro>
         throw new NotImplementedException();
     }
 
-    public Task<Livro> ObterPorId(string obraId)
+    public async Task<Livro> ObterPorId(string obraId)
     {
-        throw new NotImplementedException();
+        var googleBooksApiResult = await _service.FindById(obraId);
+
+        if (googleBooksApiResult.HttpCode != HttpStatusCode.OK)
+        {
+            return null;
+        }
+
+        return MapToLivro(googleBooksApiResult.Data!);
     }
 
     private Livro MapToLivro(BookResult book)

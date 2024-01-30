@@ -1,5 +1,6 @@
 using Bibliocine.Business.Entities;
 using Bibliocine.Business.Services.Interfaces;
+using Bibliocine.Core.Data;
 using Bibliocine.Infra.Context;
 using Microsoft.EntityFrameworkCore;
 
@@ -14,13 +15,63 @@ public class UsuarioRepository : IUsuarioRepository
         _context = context;
     }
     
+    public IUnityOfWork UnityOfWork => _context;
+    
     public async Task Salvar(Usuario user)
     {
-        await _context.Usuarios.AddAsync(user);
+        try
+        {
+            await _context.Usuarios.AddAsync(user);
+        }
+        catch (Exception ex)
+        {
+            // logging
+            throw;
+        }
+    }
+
+    public async Task Atualizar(Usuario user)
+    {
+        try
+        {
+            _context.Entry(user).State = EntityState.Modified;
+        }
+        catch (Exception ex)
+        {
+            throw;
+        }
+    }
+
+    public async Task AdicionarFavorito(Favorito favorito)
+    {
+        try
+        {
+            await _context.Favoritos.AddAsync(favorito);
+        }
+        catch (Exception ex)
+        {
+            throw;
+        }
     }
 
     public async Task<Usuario?> ObterPorId(Guid id)
     {
-        return await _context.Usuarios.AsNoTracking().FirstOrDefaultAsync(x => x.Id == id);
+        try
+        {
+            return await _context.Usuarios.AsNoTracking()
+                .Include(x => x.Favoritos)
+                .FirstOrDefaultAsync(x => x.Id == id);
+        }
+        catch (Exception ex)
+        {
+            // logging
+            throw;
+        }
     }
+
+    public void Dispose()
+    {
+        _context.Dispose();
+    }
+
 }

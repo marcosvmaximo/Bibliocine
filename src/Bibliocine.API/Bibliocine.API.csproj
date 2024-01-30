@@ -26,9 +26,6 @@
     </ItemGroup>
 
     <ItemGroup>
-      <Reference Include="Bibliocine.Business">
-        <HintPath>bin\Debug\net7.0\Bibliocine.Business.dll</HintPath>
-      </Reference>
     </ItemGroup>
 
 </Project>

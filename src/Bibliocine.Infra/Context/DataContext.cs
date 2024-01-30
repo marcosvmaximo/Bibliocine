@@ -4,6 +4,7 @@ using Bibliocine.Core.Messages.Common;
 using Bibliocine.Business;
 using Bibliocine.Business.Entities;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Design;
 
 namespace Bibliocine.Infra.Context;
 
@@ -31,26 +32,22 @@ public class DataContext : DbContext, IUnityOfWork
         base.OnConfiguring(optionsBuilder);
     }
     
-    //
-    // public async Task<bool> Commit()
-    // {
-    //     bool result = await SaveChangesAsync() > 0;
-    //     
-    //     if (result)
-    //     {
-    //         await _bus.PublishEvents(this);
-    //     }
-    //     else
-    //     {
-    //         await _bus.PublishNotification(
-    //             new DomainNotification("Evento", "Falha ao salvar a entidade, eventos não foram enviados."));
-    //     }
-    //
-    //     return result;
-    // }
     
-    public Task<bool> Commit()
+    public async Task<bool> Commit()
     {
-        throw new NotImplementedException();
+        return await SaveChangesAsync() > 0;
+    }
+}
+
+public class DataContextFactory : IDesignTimeDbContextFactory<DataContext>
+{
+    public DataContext CreateDbContext(string[] args)
+    {
+        var optionsBuilder = new DbContextOptionsBuilder<DataContext>();
+        var conectString = "Server=localhost; Port=3307; Database=bibliocine; Uid=root;Pwd=8837;";
+
+        optionsBuilder.UseMySql(conectString, ServerVersion.AutoDetect(conectString));
+
+        return new DataContext(optionsBuilder.Options);
     }
 }

@@ -1,4 +1,6 @@
 using Bibliocine.API.Controller.Common;
+using Bibliocine.Business.Entities;
+using Bibliocine.Business.Services.Interfaces;
 using Bibliocine.Business.ViewModels;
 using Bibliocine.Core.Application;
 using Microsoft.AspNetCore.Identity;
@@ -9,13 +11,13 @@ namespace Bibliocine.API.Controller;
 [Route("v1/conta")]
 public class AuthController : CommonController
 {
-    private readonly SignInManager<IdentityUser> _signInUser;
-    private readonly UserManager<IdentityUser> _userManager;
+    private readonly SignInManager<Usuario> _signInUser;
+    private readonly UserManager<Usuario> _userManager;
 
     public AuthController(
         INotifyHandler notifyHandler,
-        SignInManager<IdentityUser> signInUser,
-        UserManager<IdentityUser> userManager) : base(notifyHandler)
+        SignInManager<Usuario> signInUser,
+        UserManager<Usuario> userManager) : base(notifyHandler)
     {
         _signInUser = signInUser;
         _userManager = userManager;
@@ -27,11 +29,11 @@ public class AuthController : CommonController
         if (!ModelState.IsValid)
             return await CustomResponse(ModelState);
 
-        var user = new IdentityUser()
+        Usuario user = new(request.Nome, request.DataNascimento)
         {
             UserName = request.Email,
             Email = request.Email,
-            EmailConfirmed = true,
+            EmailConfirmed = true
         };
 
         var result = await _userManager.CreateAsync(user, request.Senha);
@@ -47,7 +49,7 @@ public class AuthController : CommonController
         }
 
         await _signInUser.SignInAsync(user, false);
-        return await CustomResponse(request);
+        return await CustomResponse(new { Username = request.Email, Name = request.Nome});
     }
 
     [HttpPost("logar")]

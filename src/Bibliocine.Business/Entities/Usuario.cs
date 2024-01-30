@@ -1,23 +1,24 @@
 using Bibliocine.Core;
+using Microsoft.AspNetCore.Identity;
 
 namespace Bibliocine.Business.Entities;
 
-public class Usuario : Entity
+public class Usuario : IdentityUser<Guid>, IAggregateRoot
 {
     private List<Favorito> _favoritos;
     
-    public Usuario(string nome, DateTime dataNascimento, string email)
+    public Usuario(string nome, DateTime dataNascimento)
     {
         Nome = nome;
         DataNascimento = dataNascimento;
-        Email = email;
 
         _favoritos = new List<Favorito>();
     }
+    
+    protected Usuario(){}
 
     public string Nome { get; private set; }
     public DateTime DataNascimento { get; private set; }
-    public string Email { get; private set; }
     public IReadOnlyCollection<Favorito> Favoritos => _favoritos;
 
     public void AdicionarFavorito(Favorito favorito)
@@ -29,10 +30,5 @@ public class Usuario : Entity
             throw new Exception("Número maximo de favoritos atingido.");
         
         _favoritos.Add(favorito);
-    }
-
-    public override void Validar()
-    {
-        throw new NotImplementedException();
     }
 }

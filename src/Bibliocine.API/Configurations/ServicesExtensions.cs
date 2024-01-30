@@ -39,7 +39,7 @@ public static class ServicesExtensions
         services.AddTransient<ITMDBFilmeExternalService, TMDBFilmeExternalService>();
         services.AddTransient<IGoogleBooksExternalServices, GoogleBooksExternalServices>();
 
-        services.AddTransient<IUsuarioService, UsuarioService>();
+        services.AddTransient<IFavoritoService, FavoritoService>();
         services.AddTransient<IUsuarioRepository, UsuarioRepository>();
         
         services.AddScoped<DataContext>();

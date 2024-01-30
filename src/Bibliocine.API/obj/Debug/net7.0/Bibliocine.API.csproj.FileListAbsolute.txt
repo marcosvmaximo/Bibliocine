@@ -54,3 +54,4 @@
 /Users/marcosmaximo/RiderProjects/Bibliocine/src/Bibliocine.API/bin/Debug/net7.0/Bibliocine.ExternalServices.GoogleBooks.dll
 /Users/marcosmaximo/RiderProjects/Bibliocine/src/Bibliocine.API/bin/Debug/net7.0/Bibliocine.ExternalServices.GoogleBooks.pdb
 /Users/marcosmaximo/RiderProjects/Bibliocine/src/Bibliocine.API/bin/Debug/net7.0/Bibliocine.Business.pdb
+/Users/marcosmaximo/RiderProjects/Bibliocine/src/Bibliocine.API/bin/Debug/net7.0/Bibliocine.Business.dll

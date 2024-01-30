@@ -15,8 +15,8 @@ public static class IdentityConfig
             opt.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString))
             );
 
-        services.AddIdentity<IdentityUser, IdentityRole>()
-            .AddRoles<IdentityRole>()
+        services.AddIdentity<Usuario, IdentityRole<Guid>>()
+            .AddRoles<IdentityRole<Guid>>()
             .AddEntityFrameworkStores<ApplicationDbContext>()
             .AddDefaultTokenProviders();
 

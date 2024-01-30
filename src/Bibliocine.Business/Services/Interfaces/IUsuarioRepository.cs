@@ -3,8 +3,10 @@ using Bibliocine.Core.Data;
 
 namespace Bibliocine.Business.Services.Interfaces;
 
-public interface IUsuarioRepository : IRepository
+public interface IUsuarioRepository : IRepository<Usuario>
 {
     Task Salvar(Usuario user);
+    Task Atualizar(Usuario user);
+    Task AdicionarFavorito(Favorito favorito);
     Task<Usuario?> ObterPorId(Guid id);
 }

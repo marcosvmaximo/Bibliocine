@@ -3,25 +3,19 @@ using Bibliocine.Core.Messages.Common;
 namespace Bibliocine.Core;
 public abstract class Entity
 {
-    private List<Event> _events;
-    
     public Entity()
     {
         Id = Guid.NewGuid();
         TimeStamp = DateTime.Now;
-        
-        _events = new();
     }
     
     public Guid Id { get; init; }
     public DateTime TimeStamp { get; init; }
-    public IReadOnlyCollection<Event> Events => _events;
     
-    public abstract void Validar();
-    
-    public void AddEvent(Event @event) => _events.Add(@event);
-    public void AddEvent(IEnumerable<Event> @event) => _events.AddRange(@event);
-    public void CleanEvents() => _events = new();
+    public virtual void Validar()
+    {
+        throw new NotImplementedException();
+    }
     
     
     public override bool Equals(object? obj)
