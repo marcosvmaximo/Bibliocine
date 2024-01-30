@@ -7,6 +7,7 @@ public interface IUsuarioRepository : IRepository<Usuario>
 {
     Task Salvar(Usuario user);
     Task Atualizar(Usuario user);
-    Task AdicionarFavorito(Favorito favorito);
     Task<Usuario?> ObterPorId(Guid id);
+    Task AdicionarFavorito(Favorito favorito);
+    Task DeletarFavorito(Favorito favorito);
 }

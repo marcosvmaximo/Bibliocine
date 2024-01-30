@@ -31,4 +31,12 @@ public class Usuario : IdentityUser<Guid>, IAggregateRoot
         
         _favoritos.Add(favorito);
     }
+
+    public void RemoverFavorito(Favorito favorito)
+    {
+        if (favorito is null)
+            throw new ArgumentNullException("Favorito informado não é válida.");
+
+        _favoritos.Remove(favorito);
+    }
 }

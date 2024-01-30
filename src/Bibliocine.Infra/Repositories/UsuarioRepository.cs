@@ -54,6 +54,18 @@ public class UsuarioRepository : IUsuarioRepository
         }
     }
 
+    public async Task DeletarFavorito(Favorito favorito)
+    {
+        try
+        {
+            _context.Favoritos.Remove(favorito);
+        }
+        catch (Exception ex)
+        {
+            throw;
+        }
+    }
+
     public async Task<Usuario?> ObterPorId(Guid id)
     {
         try

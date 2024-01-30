@@ -39,13 +39,15 @@ public class FavoritoController : CommonController
 
         return await CustomResponse();
     }
-    //
-    //
-    // [HttpDelete("{idObra}")]
-    // public async Task<ActionResult> RemoverFavorito([FromRoute] string idObra)
-    // {
-    //     
-    // }
+    
+    
+    [HttpDelete("{userId:guid}")]
+    public async Task<ActionResult> RemoverFavorito([FromRoute] Guid userId, [FromQuery]string obraId)
+    {
+        await _service.RemoverFavorito(userId, obraId);
+
+        return await CustomResponse();
+    }
 
     // private void ObterUsuario()
     // {

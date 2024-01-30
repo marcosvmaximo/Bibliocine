@@ -23,21 +23,15 @@ public class FavoritoService : IFavoritoService
         _obraService = obraService;
     }
 
-    public async Task<bool> AdicionarFavorito(Guid userId, string obraId, ETipoObra tipoObra)
+    public async Task AdicionarFavorito(Guid userId, string obraId, ETipoObra tipoObra)
     {
-        var usuario = await _repository.ObterPorId(userId);
-        // Valida se usuário existe
-        if (usuario == null)
-        {
-            await _notifyHandler.PublicarNotificacao(new Notification(userId.ToString(), "Usuário não encontrado."));
-            return false;
-        }
+        var usuario = await ObterUsuario(userId);
 
         // Regra para limitar o numero de favoritos
         if (usuario.Favoritos.Count > 30)
         {
             await _notifyHandler.PublicarNotificacao(new Notification(usuario.Nome, "Número maximo de favoritos atingido"));
-            return false;
+            return;
         }
         
         Favorito favorito = new(usuario, usuario.Id, tipoObra, obraId);
@@ -47,18 +41,11 @@ public class FavoritoService : IFavoritoService
         await _repository.AdicionarFavorito(favorito);
         
         await _repository.UnityOfWork.Commit();
-        
-        return true;
     }
 
     public async Task<IEnumerable<Obra>> ObterFavoritosPorUsuario(Guid userId)
     {
-        var usuario = await _repository.ObterPorId(userId);
-        if (usuario == null)
-        {
-            await _notifyHandler.PublicarNotificacao(new Notification(userId.ToString(), "Usuário não encontrado."));
-            return null;
-        }
+        var usuario = await ObterUsuario(userId);
 
         var result = new List<Obra>();
         
@@ -70,5 +57,37 @@ public class FavoritoService : IFavoritoService
         }
 
         return result;
+    }
+
+    public async Task RemoverFavorito(Guid userId, string obraId)
+    {
+        var usuario = await ObterUsuario(userId);
+
+        var favorito = usuario.Favoritos.FirstOrDefault(x => x.ObraId == obraId);
+        if (favorito == null)
+        {
+            await _notifyHandler.PublicarNotificacao(new Notification(obraId, "Favorito não encontrado para esse usuário."));
+            return;
+        }
+
+        usuario.RemoverFavorito(favorito);
+
+        await _repository.Atualizar(usuario);
+        await _repository.DeletarFavorito(favorito);
+        
+        await _repository.UnityOfWork.Commit();
+    }
+
+    private async Task<Usuario> ObterUsuario(Guid id)
+    {
+        var usuario = await _repository.ObterPorId(id);
+        
+        if (usuario == null)
+        {
+            await _notifyHandler.PublicarNotificacao(new Notification(id.ToString(), "Usuário não encontrado."));
+            return null;
+        }
+
+        return usuario;
     }
 }

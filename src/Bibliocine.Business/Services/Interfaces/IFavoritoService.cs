@@ -6,6 +6,7 @@ namespace Bibliocine.Business.Services.Interfaces;
 
 public interface IFavoritoService
 {
-    Task<bool> AdicionarFavorito(Guid userId, string obraId, ETipoObra tipoObra);
+    Task AdicionarFavorito(Guid userId, string obraId, ETipoObra tipoObra);
     Task<IEnumerable<Obra?>> ObterFavoritosPorUsuario(Guid usuarioId);
+    Task RemoverFavorito(Guid userId, string obraId);
 }
