@@ -18,6 +18,7 @@ public static class IdentityConfig
         services.AddIdentity<Usuario, IdentityRole<Guid>>()
             .AddRoles<IdentityRole<Guid>>()
             .AddEntityFrameworkStores<ApplicationDbContext>()
+            .AddErrorDescriber<IdentityMessagesPortuguese>()
             .AddDefaultTokenProviders();
 
         return services;
