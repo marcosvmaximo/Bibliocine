@@ -27,7 +27,7 @@ public static class ServicesExtensions
         );
 
         // Identity
-        services.AddIdentityConfiguration(configuration);
+        services.AddIdentityExtensions(configuration);
 
         // IOC Configurations
         services.Configure<TMDBSettings>(configuration.GetSection("ExternalServices:TMDB"));

@@ -55,3 +55,11 @@
 /Users/marcosmaximo/RiderProjects/Bibliocine/src/Bibliocine.API/bin/Debug/net7.0/Bibliocine.ExternalServices.GoogleBooks.pdb
 /Users/marcosmaximo/RiderProjects/Bibliocine/src/Bibliocine.API/bin/Debug/net7.0/Bibliocine.Business.pdb
 /Users/marcosmaximo/RiderProjects/Bibliocine/src/Bibliocine.API/bin/Debug/net7.0/Bibliocine.Business.dll
+/Users/marcosmaximo/RiderProjects/Bibliocine/src/Bibliocine.API/bin/Debug/net7.0/Microsoft.AspNetCore.Authentication.JwtBearer.dll
+/Users/marcosmaximo/RiderProjects/Bibliocine/src/Bibliocine.API/bin/Debug/net7.0/Microsoft.IdentityModel.Abstractions.dll
+/Users/marcosmaximo/RiderProjects/Bibliocine/src/Bibliocine.API/bin/Debug/net7.0/Microsoft.IdentityModel.JsonWebTokens.dll
+/Users/marcosmaximo/RiderProjects/Bibliocine/src/Bibliocine.API/bin/Debug/net7.0/Microsoft.IdentityModel.Logging.dll
+/Users/marcosmaximo/RiderProjects/Bibliocine/src/Bibliocine.API/bin/Debug/net7.0/Microsoft.IdentityModel.Protocols.dll
+/Users/marcosmaximo/RiderProjects/Bibliocine/src/Bibliocine.API/bin/Debug/net7.0/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+/Users/marcosmaximo/RiderProjects/Bibliocine/src/Bibliocine.API/bin/Debug/net7.0/Microsoft.IdentityModel.Tokens.dll
+/Users/marcosmaximo/RiderProjects/Bibliocine/src/Bibliocine.API/bin/Debug/net7.0/System.IdentityModel.Tokens.Jwt.dll

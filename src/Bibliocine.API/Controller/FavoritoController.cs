@@ -5,11 +5,13 @@ using Bibliocine.Business;
 using Bibliocine.Business.Enum;
 using Bibliocine.Business.Services.Interfaces;
 using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Bibliocine.API.Controller;
 
 [Route("v1/usuario")]
+[Authorize]
 public class FavoritoController : CommonController
 {
     private readonly IFavoritoService _service;

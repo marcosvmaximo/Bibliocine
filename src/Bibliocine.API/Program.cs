@@ -20,6 +20,8 @@ app.UseSwaggerUI(c =>
     c.SwaggerEndpoint("/swagger/v1/swagger.json", "API Version 1.0");
 });
 
+app.UseAuthentication();
+app.UseAuthorization();
 
 app.MapControllers();
 app.Run();

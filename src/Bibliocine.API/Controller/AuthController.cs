@@ -1,3 +1,6 @@
+using System.IdentityModel.Tokens.Jwt;
+using System.Text;
+using Bibliocine.API.Configurations.Auth;
 using Bibliocine.API.Controller.Common;
 using Bibliocine.Business.Entities;
 using Bibliocine.Business.Services.Interfaces;
@@ -5,6 +8,8 @@ using Bibliocine.Business.ViewModels;
 using Bibliocine.Core.Application;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Options;
+using Microsoft.IdentityModel.Tokens;
 
 namespace Bibliocine.API.Controller;
 
@@ -13,12 +18,15 @@ public class AuthController : CommonController
 {
     private readonly SignInManager<Usuario> _signInUser;
     private readonly UserManager<Usuario> _userManager;
+    private readonly IdentityConfig _identityConfig;
 
     public AuthController(
         INotifyHandler notifyHandler,
+        IOptions<IdentityConfig> identityConfig,
         SignInManager<Usuario> signInUser,
         UserManager<Usuario> userManager) : base(notifyHandler)
     {
+        _identityConfig = identityConfig.Value; 
         _signInUser = signInUser;
         _userManager = userManager;
     }
@@ -49,7 +57,7 @@ public class AuthController : CommonController
         }
 
         await _signInUser.SignInAsync(user, false);
-        return await CustomResponse(new { Username = request.Email, Name = request.Nome});
+        return await CustomResponse(GerarJwt() );
     }
 
     [HttpPost("logar")]
@@ -62,7 +70,7 @@ public class AuthController : CommonController
 
         if (result.Succeeded)
         {
-            return await CustomResponse();
+            return await CustomResponse(GerarJwt());
         }
         if (result.IsLockedOut)
         {
@@ -72,5 +80,22 @@ public class AuthController : CommonController
         
         await Notify("Usuário ou senha inválido.");
         return await CustomResponse();
+    }
+
+    private string GerarJwt()
+    {
+        var tokenHandler = new JwtSecurityTokenHandler();
+        var key = Encoding.ASCII.GetBytes(_identityConfig.Secret);
+
+        var token = tokenHandler.CreateToken(new SecurityTokenDescriptor()
+        {
+            Issuer = _identityConfig.Emissor,
+            Audience = _identityConfig.ValidoEm,
+            Expires = DateTime.UtcNow.AddHours(_identityConfig.ExpiracaoHoras),
+            SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha256)
+        });
+
+        var encondedToken = tokenHandler.WriteToken(token);
+        return encondedToken;
     }
 }
