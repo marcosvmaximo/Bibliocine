@@ -57,7 +57,18 @@ public class AuthController : CommonController
         }
 
         await _signInUser.SignInAsync(user, false);
-        return await CustomResponse(GerarJwt() );
+        
+        return await CustomResponse(new
+        {
+            User = new
+            {
+                Id = user.Id,
+                Nome = user.Nome,
+                Email = user.Email
+            },
+            ExpiresIn = _identityConfig.ExpiracaoHoras,
+            Token = GerarJwt()
+        });
     }
 
     [HttpPost("logar")]
@@ -67,10 +78,21 @@ public class AuthController : CommonController
             return await CustomResponse(ModelState);
 
         var result = await _signInUser.PasswordSignInAsync(request.Email, request.Senha, false, true);
-
+        
         if (result.Succeeded)
         {
-            return await CustomResponse(GerarJwt());
+            var user = await _userManager.FindByEmailAsync(request.Email);
+            return await CustomResponse(new
+            {
+                User = new
+                {
+                    Id = user.Id,
+                    Nome = user.Nome,
+                    Email = user.Email
+                },
+                ExpiresIn = _identityConfig.ExpiracaoHoras,
+                Token = GerarJwt(),
+            });
         }
         if (result.IsLockedOut)
         {
