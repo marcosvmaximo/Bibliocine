@@ -1,7 +1,7 @@
 # Bibliocine
 Bibliocine é um mecanismo de busca de filmes e livros com autenticação de usuários e operações CRUD.
 
-Optei por unificar as buscas de filmes e livros sob a entidade "Obra", mantendo a distinção entre livros e filmes na interface. Utilizei APIs externas do Google e da TMDB para enriquecer os dados disponíveis.
+Optei por unificar as buscas de filmes e livros sob a entidade "Obra", mantendo a distinção entre livros e filmes na interface. Utilizei APIs externas do Google e da TMDB, pois notei dados mais completos de acordo com as expectativas.
 
 - [API do Google Books](https://developers.google.com/books?hl=pt-br)
 - [API da The Movie Database (TMDb)](https://developer.themoviedb.org/reference/intro/getting-started)
