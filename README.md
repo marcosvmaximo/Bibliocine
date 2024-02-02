@@ -8,6 +8,9 @@ Bibliocine é um mecanismo de busca de filmes e livros com autenticação de usu
 - [Node.js (v16.16+)](https://nodejs.org/) e [npm](https://www.npmjs.com/)
 - [MySQL]()
 
+## Variáveis de ambiente
+Para fins de teste, as variáveis de ambiente e credenciais estarão diretamente no arquivo de configuração `appsettings`, sendo válidas durante 1 semana.
+
 ## Instalação
 
 ### 1. Clone o repositório:
@@ -34,7 +37,6 @@ Bibliocine é um mecanismo de busca de filmes e livros com autenticação de usu
     code appsettings.json 
    ```
 
-   <br>
    
    Então modifique a Connection String default para as credenciais locais do seu MYSQL:
    
@@ -43,7 +45,6 @@ Bibliocine é um mecanismo de busca de filmes e livros com autenticação de usu
       "DefaultConnection": "Server=localhost; Port=3306; Database=bibliocine; Uid=root;Pwd=1234;"
      },
    ```
-   <br>
 
    Para:
    
@@ -53,7 +54,6 @@ Bibliocine é um mecanismo de busca de filmes e livros com autenticação de usu
      },
    ```
 
-<br>
    Roda a migração criando as tabelas:
    
    ```bash
