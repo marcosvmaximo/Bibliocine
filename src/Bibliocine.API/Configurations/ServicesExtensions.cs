@@ -12,6 +12,7 @@ using Bibliocine.ExternalServices.IMDB.Configurations;
 using Bibliocine.ExternalServices.IMDB.Services;
 using Bibliocine.Infra.Context;
 using Bibliocine.Infra.Repositories;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
 namespace Bibliocine.API.Configurations;
@@ -45,6 +46,22 @@ public static class ServicesExtensions
         services.AddScoped<DataContext>();
         services.AddScoped<INotifyHandler, NotifyHandler>();
 
+        // CORS
+        // Liberado a todos
+        services.AddCors(options =>
+        {
+            options.AddPolicy("AllowOrigin", builder =>
+            {
+                builder.AllowAnyOrigin()
+                    .AllowAnyMethod()
+                    .AllowAnyHeader();
+            });
+        });
+
+        services.Configure<ApiBehaviorOptions>(options =>
+        {
+            options.SuppressModelStateInvalidFilter = true;
+        });
         return services;
     }
 }

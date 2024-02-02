@@ -58,7 +58,7 @@ public class FilmeService : IObraService<Filme>
             Id = filme.Id.ToString(),
             TipoObra = ETipoObra.FILME,
             Titulo = filme?.Title,
-            ImagemUrl = $"https://image.tmdb.org/t/p/w500/{filme.PosterPath}",
+            ImagemUrl = filme.PosterPath != null ? $"https://image.tmdb.org/t/p/w500/{filme.PosterPath}" : null,
             Descricao = filme?.Overview,
             Generos = nomesGeneros,
             TituloOriginal = filme?.OriginalTitle,

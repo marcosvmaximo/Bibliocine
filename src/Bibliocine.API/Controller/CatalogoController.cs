@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Bibliocine.API.Controller;
 
-[Route("v1/catalogo")]
+[Route("api/v1/catalogo")]
 [Authorize]
 public class CatalogoController : CommonController
 {

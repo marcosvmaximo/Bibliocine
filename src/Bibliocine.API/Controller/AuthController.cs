@@ -1,5 +1,6 @@
 using System.IdentityModel.Tokens.Jwt;
 using System.Text;
+using Bibliocine.API.Configurations;
 using Bibliocine.API.Configurations.Auth;
 using Bibliocine.API.Controller.Common;
 using Bibliocine.Business.Entities;
@@ -13,7 +14,7 @@ using Microsoft.IdentityModel.Tokens;
 
 namespace Bibliocine.API.Controller;
 
-[Route("v1/conta")]
+[Route("api/v1/conta")]
 public class AuthController : CommonController
 {
     private readonly SignInManager<Usuario> _signInUser;
@@ -31,7 +32,7 @@ public class AuthController : CommonController
         _userManager = userManager;
     }
 
-    [HttpPost("registrar")]
+    [HttpPost("register")]
     public async Task<ActionResult> Registrar([FromBody] RegistrarUsuarioViewModel request)
     {
         if (!ModelState.IsValid)
@@ -71,7 +72,7 @@ public class AuthController : CommonController
         });
     }
 
-    [HttpPost("logar")]
+    [HttpPost("login")]
     public async Task<ActionResult> Logar([FromBody] LogarUsuarioViewModel request)
     {
         if (!ModelState.IsValid)

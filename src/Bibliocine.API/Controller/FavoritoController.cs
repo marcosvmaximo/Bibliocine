@@ -10,7 +10,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Bibliocine.API.Controller;
 
-[Route("v1/usuario")]
+[Route("api/v1/usuario")]
 [Authorize]
 public class FavoritoController : CommonController
 {

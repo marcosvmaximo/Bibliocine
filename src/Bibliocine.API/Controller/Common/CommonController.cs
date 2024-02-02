@@ -33,7 +33,7 @@ public abstract class CommonController : ControllerBase
             return BadRequest(new BaseResponse
             {
                 HttpCode = 400,
-                Sucess = false,
+                Success = false,
                 Message = "Ocorreu um erro ao enviar a requisição.",
                 Result = _notifyHandler.GetNotifications().Result.Select(x => new { Key = x.Property, Value = x.Message })
             }); ;
@@ -42,7 +42,7 @@ public abstract class CommonController : ControllerBase
         return Ok(new BaseResponse
         {
             HttpCode = 200,
-            Sucess = true,
+            Success = true,
             Message = "Requisição enviada com sucesso.",
             Result = result
         });

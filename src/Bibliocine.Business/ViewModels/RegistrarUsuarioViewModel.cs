@@ -17,7 +17,8 @@ public class RegistrarUsuarioViewModel
     [Required(ErrorMessage = "O campo {0} é obrigatório.")]
     public string Senha { get; set; }
     
-    [Compare("Senha", ErrorMessage = "Senhas não conferem.")]
+    [Compare("Senha", ErrorMessage = "Senhas não conferem.")]    
+    [Required(ErrorMessage = "O campo {0} é obrigatório.")]
     public string ConfirmarSenha { get; set; }
     
     [Required(ErrorMessage = "O campo {0} é obrigatório.")]
