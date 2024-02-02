@@ -34,7 +34,8 @@ Bibliocine é um mecanismo de busca de filmes e livros com autenticação de usu
     code appsettings.json 
    ```
 
-
+   <br>
+   
    Então modifique a Connection String default para as credenciais locais do seu MYSQL:
    
    ```bash
@@ -42,7 +43,7 @@ Bibliocine é um mecanismo de busca de filmes e livros com autenticação de usu
       "DefaultConnection": "Server=localhost; Port=3306; Database=bibliocine; Uid=root;Pwd=1234;"
      },
    ```
-
+   <br>
 
    Para:
    
@@ -52,7 +53,7 @@ Bibliocine é um mecanismo de busca de filmes e livros com autenticação de usu
      },
    ```
 
-
+<br>
    Roda a migração criando as tabelas:
    
    ```bash
