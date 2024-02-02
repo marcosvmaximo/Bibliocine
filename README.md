@@ -99,3 +99,13 @@ Rode a aplicação:
 npm install
 npm run dev
 ```
+
+
+<br>
+
+## Conclusão
+Com isso teremos o projeto vue rodando na porta local: `http://127.0.0.1:5173/` e o projeto .net na porta: `http://localhost:5211/`.
+
+A API possuí a interface do swagger, porém ela não está completamente documentada, então não deve ser considerada a risca.
+
+
