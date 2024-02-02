@@ -104,7 +104,7 @@ npm run dev
 <br>
 
 ## Conclusão
-Com isso teremos o projeto vue rodando na porta local: `http://127.0.0.1:5173/` e o projeto .net na porta: `http://localhost:5211/`.
+Com isso, teremos o projeto Vue rodando na porta local: http://127.0.0.1:5173/ e o projeto .NET na porta: http://localhost:5211/. Importante ressaltar que, devido à falta de tempo, não consegui containerizar a aplicação, o que dificulta sua execução em máquinas externas à minha. Portanto, deve-se prestar atenção ao criar o banco de dados para garantir o funcionamento correto da aplicação.
 
 A API possuí a interface do swagger, porém ela não está completamente documentada, então não deve ser considerada a risca.
 
