@@ -71,12 +71,12 @@ Para fins de teste, as variáveis de ambiente e credenciais estarão diretamente
    dotnet ef database update -c ApplicationDbContext
    ```
 
-Com isso será criado o banco de dados.
+   Com isso será criado o banco de dados.
 
    ## 2.3. Rodar API
 
    Acesse o diretório raiz: `$Bibliocine`
 
-   Rode o projeto: `dotnet run`
+   Rode o projeto: `dotnet run --project src/Bibliocine.API`
 
 ### 3. Configurar front-end
