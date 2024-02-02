@@ -88,3 +88,14 @@ Para fins de teste, as variáveis de ambiente e credenciais estarão diretamente
 <br>
 
 ### 3. Configurar front-end
+
+Do diretório raiz, acesse esse diretório:
+```bash
+cd Bibliocine/web
+```
+
+Rode a aplicação:
+```bash
+npm install
+npm run serve
+```
