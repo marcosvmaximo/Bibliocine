@@ -52,9 +52,10 @@ public static class ServicesExtensions
         {
             options.AddPolicy("AllowOrigin", builder =>
             {
-                builder.AllowAnyOrigin()
+                builder.WithOrigins("http://127.0.0.1:5173")
+                    .AllowAnyHeader()
                     .AllowAnyMethod()
-                    .AllowAnyHeader();
+                    .AllowCredentials();
             });
         });
 

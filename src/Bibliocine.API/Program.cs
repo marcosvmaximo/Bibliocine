@@ -24,6 +24,7 @@ app.UseAuthentication();
 app.UseAuthorization();
 
 app.UseCors("AllowOrigin");
+
 app.UseMiddleware<ApiExceptionMiddleware>();
 
 app.MapControllers();

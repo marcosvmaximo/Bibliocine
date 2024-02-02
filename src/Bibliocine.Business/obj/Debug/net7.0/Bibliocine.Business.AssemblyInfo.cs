@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Bibliocine.Business")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5a19e26b8314275303460e51a1b6fc316a81c6a3")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0decb8b4995fff3cc11f6b66ef84f7989a63fe85")]
 [assembly: System.Reflection.AssemblyProductAttribute("Bibliocine.Business")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Bibliocine.Business")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

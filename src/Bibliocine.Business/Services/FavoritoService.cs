@@ -27,6 +27,13 @@ public class FavoritoService : IFavoritoService
     {
         var usuario = await ObterUsuario(userId);
 
+        var favoritoUsuario = usuario.Favoritos.FirstOrDefault(x => x.ObraId == obraId && x.UsuarioId == userId);
+        if (favoritoUsuario != null)
+        {
+            await _notifyHandler.PublicarNotificacao(new Notification(usuario.Nome, $"Usuário {usuario.Nome} já possui esse favorito em sua lista."));
+            return;
+        }
+        
         // Regra para limitar o numero de favoritos
         if (usuario.Favoritos.Count > 30)
         {
@@ -62,7 +69,7 @@ public class FavoritoService : IFavoritoService
     public async Task RemoverFavorito(Guid userId, string obraId)
     {
         var usuario = await ObterUsuario(userId);
-
+        
         var favorito = usuario.Favoritos.FirstOrDefault(x => x.ObraId == obraId);
         if (favorito == null)
         {
