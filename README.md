@@ -8,11 +8,14 @@ Bibliocine é um mecanismo de busca de filmes e livros com autenticação de usu
 - [Node.js (v16.16+)](https://nodejs.org/) e [npm](https://www.npmjs.com/)
 - [MySQL](https://www.mysql.com/)
 
+<br>
 ## Variáveis de ambiente
 Para fins de teste, as variáveis de ambiente e credenciais estarão diretamente no arquivo de configuração `appsettings`, sendo válidas durante 1 semana.
 
+<br>
 ## Instalação
 
+<br>
 ### 1. Clone o repositório:
 
    ```bash
@@ -20,6 +23,7 @@ Para fins de teste, as variáveis de ambiente e credenciais estarão diretamente
    cd Bibliocine
    ```
 
+<br>
 ### 2. Configurar back-end
 
    #### 2.1. Configurar o servidor .NET:
@@ -71,12 +75,11 @@ Para fins de teste, as variáveis de ambiente e credenciais estarão diretamente
    dotnet ef database update -c ApplicationDbContext
    ```
 
-   Com isso será criado o banco de dados.
-
    #### 2.3. Iniciar a API
 
    Acesse o diretório raiz: `$Bibliocine`
 
    Rode o projeto: `dotnet run --project src/Bibliocine.API`
 
+<br>
 ### 3. Configurar front-end
