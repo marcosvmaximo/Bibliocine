@@ -6,7 +6,7 @@ Bibliocine é um mecanismo de busca de filmes e livros com autenticação de usu
 
 - [.NET SDK (NET core 7+)](https://dotnet.microsoft.com/download)
 - [Node.js (v16.16+)](https://nodejs.org/) e [npm](https://www.npmjs.com/)
-- [MySQL]()
+- [MySQL](https://www.mysql.com/)
 
 ## Variáveis de ambiente
 Para fins de teste, as variáveis de ambiente e credenciais estarão diretamente no arquivo de configuração `appsettings`, sendo válidas durante 1 semana.
@@ -28,7 +28,7 @@ Para fins de teste, as variáveis de ambiente e credenciais estarão diretamente
    dotnet restore
    ```
    
-   #### 2.2. Configurar banco de dados:
+   #### 2.2. Configurar banco de dados da aplicação:
    
    Acesse o aquivo appsettings.json:
    
@@ -55,15 +55,22 @@ Para fins de teste, as variáveis de ambiente e credenciais estarão diretamente
    ```
 
    Roda a migração criando as tabelas:
-   
+
+   - Volte para o diretório raiz Bibliocine:
    ```bash
-   dotnet ef database update
+   cd ../../
    ```
 
-   #### 2.3. Configurações de ambientes:
-   
+   - Acesse o diretório de Infraestrutura:
    ```bash
-   dotnet ef database update
+   cd src/Bibliocine.Infra  
    ```
+
+   - Roda a migração
+   ```bash
+   dotnet ef database update -c ApplicationDbContext
+   ```
+
+Com isso será criado 
 
 ### 3. Configurar front-end
