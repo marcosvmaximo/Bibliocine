@@ -73,7 +73,7 @@ Para fins de teste, as variáveis de ambiente e credenciais estarão diretamente
 
    Com isso será criado o banco de dados.
 
-   ## 2.3. Rodar API
+   #### 2.3. Iniciar a API
 
    Acesse o diretório raiz: `$Bibliocine`
 
