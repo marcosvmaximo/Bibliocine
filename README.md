@@ -28,26 +28,33 @@ Bibliocine é um mecanismo de busca de filmes e livros com autenticação de usu
    #### 2.2. Configurar banco de dados:
    
    Acesse o aquivo appsettings.json:
+   
    ```bash
     cd src/Bibliocine.API/
     code appsettings.json 
    ```
 
+
    Então modifique a Connection String default para as credenciais locais do seu MYSQL:
+   
    ```bash
    "ConnectionStrings": {
       "DefaultConnection": "Server=localhost; Port=3306; Database=bibliocine; Uid=root;Pwd=1234;"
      },
    ```
 
+
    Para:
+   
    ```bash
    "ConnectionStrings": {
       "DefaultConnection": "Server={host}; Port={porta}; Database=bibliocine; Uid={usuario};Pwd={senha};"
      },
    ```
 
-   Cria Migrations:
+
+   Roda a migração criando as tabelas:
+   
    ```bash
    dotnet ef database update
    ```
