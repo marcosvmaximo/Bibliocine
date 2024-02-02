@@ -8,6 +8,8 @@ Optei por unificar as buscas de filmes e livros sob a entidade "Obra", mantendo 
 
 Na aplicação .NET, escolhi demonstrar algumas habilidades específicas, e a arquitetura reflete uma escolha mais voltada para fins de demonstração do que para um cenário real. Quanto ao Vue, optei por utilizar TypeScript para aproveitar minha experiência anterior com Angular, embora reconheça que não atingi o nível desejado no projeto Vue, devido à minha familiaridade limitada com o Vue.js.
 
+<br>
+
 ## Pré-requisitos
 
 - [.NET SDK (NET core 7+)](https://dotnet.microsoft.com/download)
