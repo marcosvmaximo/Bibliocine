@@ -91,11 +91,11 @@ Para fins de teste, as variáveis de ambiente e credenciais estarão diretamente
 
 Do diretório raiz, acesse esse diretório:
 ```bash
-cd Bibliocine/web
+cd web
 ```
 
 Rode a aplicação:
 ```bash
 npm install
-npm run serve
+npm run dev
 ```
