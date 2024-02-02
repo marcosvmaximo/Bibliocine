@@ -1,6 +1,12 @@
 # Bibliocine
+Bibliocine é um mecanismo de busca de filmes e livros com autenticação de usuários e operações CRUD.
 
-Bibliocine é um mecanismo de busca de filmes e livros com autenticação de usuários e CRUD.
+Optei por unificar as buscas de filmes e livros sob a entidade "Obra", mantendo a distinção entre livros e filmes na interface. Utilizei APIs externas do Google e da TMDB para enriquecer os dados disponíveis.
+
+- [API do Google Books](https://developers.google.com/books?hl=pt-br)
+- [API da The Movie Database (TMDb)](https://developer.themoviedb.org/reference/intro/getting-started)
+
+Na aplicação .NET, escolhi demonstrar algumas habilidades específicas, e a arquitetura reflete uma escolha mais voltada para fins de demonstração do que para um cenário real. Quanto ao Vue, optei por utilizar TypeScript para aproveitar minha experiência anterior com Angular, embora reconheça que não atingi o nível desejado no projeto Vue, devido à minha familiaridade limitada com o Vue.js.
 
 ## Pré-requisitos
 
